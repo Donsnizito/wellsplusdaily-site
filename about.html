@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WellsPlusDaily — The New Standard in Influencer Brokerage</title>
+<title>WellsPlusDaily — About Us</title>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<meta name="description" content="WellsPlusDaily provides contract execution, secure deal management, and data-driven talent matching for premium brands and creators.">
+<meta name="description" content="WellsPlusDaily provides structured contract execution, secure deal management, and data-driven talent matching for premium brands and creators.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400&display=swap" rel="stylesheet">
@@ -17,23 +17,27 @@
   --ink2:#3A3835;
   --ink3:#787571;
   --ink4:#B4B1AC;
+  --ink-faint:rgba(20,18,16,0.3);
+  --ink-light:rgba(20,18,16,0.5);
   --rule:#E4E0DA;
   --cream:#F5F3EE;
   --serif:'Cormorant Garamond',Georgia,serif;
   --sans:'DM Sans',system-ui,sans-serif;
 }
 html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--w);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{
+  font-family:var(--sans);background:var(--w);color:var(--ink);
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
 
-/* NAV — stripped to minimum */
+/* NAV */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:200;
   padding:0 56px;height:68px;
   display:flex;align-items:center;justify-content:space-between;
   background:rgba(253,252,250,0.88);
   backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
-  border-bottom:1px solid transparent;
-  transition:border-color 0.3s;
+  border-bottom:1px solid transparent;transition:border-color 0.3s;
 }
 nav.scrolled{border-bottom-color:var(--rule)}
 .logo{
@@ -44,103 +48,52 @@ nav.scrolled{border-bottom-color:var(--rule)}
 .nav-right{display:flex;align-items:center;gap:40px}
 .nav-link{
   font-size:12px;font-weight:400;letter-spacing:0.12em;
-  text-transform:uppercase;color:var(--ink3);
-  text-decoration:none;transition:color 0.2s;
+  text-transform:uppercase;color:var(--ink3);text-decoration:none;
+  transition:color 0.2s;
 }
 .nav-link:hover{color:var(--ink)}
 .nav-cta{
   font-size:12px;font-weight:400;letter-spacing:0.12em;
-  text-transform:uppercase;color:var(--ink);
-  text-decoration:none;
-  border:1px solid var(--ink);
-  padding:10px 24px;
+  text-transform:uppercase;color:var(--ink);text-decoration:none;
+  border:1px solid var(--ink);padding:10px 24px;
   transition:background 0.2s,color 0.2s;
 }
 .nav-cta:hover{background:var(--ink);color:var(--w)}
 
 /* HERO */
-.hero{
-  min-height:100vh;
-  display:grid;
-  grid-template-rows:1fr auto;
-  padding:0 56px;
-  max-width:1280px;
-  margin:0 auto;
-}
-.hero-center{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  padding-top:68px;
-}
+.hero{padding:160px 56px 80px}
+.hero-center{max-width:800px;margin:0 auto;text-align:center}
 .eyebrow{
   font-size:11px;font-weight:400;letter-spacing:0.22em;
   text-transform:uppercase;color:var(--ink4);
-  margin-bottom:40px;
+  display:block;margin-bottom:32px;
   opacity:0;animation:up 0.7s 0.2s ease forwards;
 }
 .hero-h1{
-  font-family:var(--serif);
-  font-size:clamp(52px,7.5vw,110px);
-  font-weight:300;line-height:1.0;
-  letter-spacing:-0.025em;
-  color:var(--ink);
-  max-width:820px;
-  margin-bottom:48px;
+  font-family:var(--serif);font-size:clamp(56px,7vw,96px);
+  font-weight:300;line-height:1.05;letter-spacing:-0.02em;
+  color:var(--ink);margin-bottom:32px;
   opacity:0;animation:up 0.8s 0.35s ease forwards;
 }
 .hero-h1 em{font-style:italic;font-weight:300}
 .hero-sub{
-  font-size:15px;font-weight:300;line-height:1.8;
-  color:var(--ink2);max-width:480px;
-  margin-bottom:56px;
+  font-size:17px;font-weight:300;line-height:1.8;
+  color:var(--ink2);margin:0 auto 48px;max-width:640px;
   opacity:0;animation:up 0.7s 0.5s ease forwards;
 }
 .hero-actions{
-  display:flex;align-items:center;gap:24px;
-  opacity:0;animation:up 0.6s 0.65s ease forwards;
+  display:flex;align-items:center;justify-content:center;gap:24px;
+  opacity:0;animation:up 0.7s 0.65s ease forwards;
 }
 .btn-dark{
   display:inline-block;font-size:12px;font-weight:400;
   letter-spacing:0.12em;text-transform:uppercase;
   color:var(--w);background:var(--ink);
-  padding:16px 36px;text-decoration:none;
-  transition:opacity 0.2s;
+  padding:16px 36px;text-decoration:none;transition:opacity 0.2s;
 }
 .btn-dark:hover{opacity:0.75}
-.btn-text{
-  font-size:12px;font-weight:400;letter-spacing:0.1em;
-  text-transform:uppercase;color:var(--ink3);
-  text-decoration:none;
-  border-bottom:1px solid transparent;
-  padding-bottom:1px;
-  transition:color 0.2s,border-color 0.2s;
-}
-.btn-text:hover{color:var(--ink);border-color:var(--ink)}
-.hero-bottom{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  border-top:1px solid var(--rule);
-  opacity:0;animation:up 0.5s 0.8s ease forwards;
-}
-.hero-stat{
-  padding:32px 0;
-  border-right:1px solid var(--rule);
-}
-.hero-stat:last-child{border-right:none;text-align:right}
-.hero-stat:nth-child(2){padding-left:40px}
-.stat-val{
-  font-family:var(--serif);font-size:36px;font-weight:300;
-  color:var(--ink);display:block;margin-bottom:6px;
-}
-.stat-lbl{
-  font-size:11px;font-weight:400;letter-spacing:0.14em;
-  text-transform:uppercase;color:var(--ink4);
-}
 
-/* DIVIDER */
-.full-rule{height:1px;background:var(--rule);width:100%}
-
-/* SECTION COMMON */
+/* SECTION */
 .section{max-width:1280px;margin:0 auto;padding:128px 56px}
 .s-label{
   font-size:11px;font-weight:400;letter-spacing:0.2em;
@@ -148,7 +101,7 @@ nav.scrolled{border-bottom-color:var(--rule)}
   display:block;margin-bottom:72px;
 }
 
-/* ABOUT */
+/* ABOUT / OUTCOME H2 BLOCK */
 .about-grid{
   display:grid;grid-template-columns:5fr 4fr;
   gap:120px;align-items:start;
@@ -157,9 +110,13 @@ nav.scrolled{border-bottom-color:var(--rule)}
   font-family:var(--serif);
   font-size:clamp(32px,3.5vw,50px);
   font-weight:300;line-height:1.12;
-  color:var(--ink);margin-bottom:40px;
+  color:var(--ink);margin-bottom:20px;
 }
 .about-h2 em{font-style:italic}
+.about-sub{
+  font-size:17px;font-weight:300;line-height:1.8;
+  color:var(--ink2);margin-bottom:40px;
+}
 .about-body p{
   font-size:15px;font-weight:300;line-height:1.9;
   color:var(--ink2);margin-bottom:20px;
@@ -181,73 +138,8 @@ nav.scrolled{border-bottom-color:var(--rule)}
   color:var(--ink4);text-align:right;max-width:180px;
 }
 
-/* PROCESS — full bleed cream */
-.cream-band{background:var(--cream)}
-.process-inner{max-width:1280px;margin:0 auto;padding:128px 56px}
-.process-head{
-  display:grid;grid-template-columns:1fr 1fr;
-  gap:120px;align-items:end;margin-bottom:96px;
-}
-.process-h2{
-  font-family:var(--serif);
-  font-size:clamp(32px,3.5vw,50px);
-  font-weight:300;line-height:1.12;color:var(--ink);
-}
-.process-h2 em{font-style:italic}
-.process-desc{
-  font-size:14px;font-weight:300;line-height:1.9;color:var(--ink2);
-}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
-.step{
-  padding-right:56px;
-  border-right:1px solid var(--rule);
-}
-.step:nth-child(2){padding-left:56px;padding-right:56px}
-.step:last-child{padding-left:56px;padding-right:0;border-right:none}
-.step-n{
-  font-family:var(--serif);font-size:72px;font-weight:300;
-  color:var(--rule);line-height:1;display:block;margin-bottom:28px;
-}
-.step-h{
-  font-family:var(--serif);font-size:24px;font-weight:400;
-  color:var(--ink);margin-bottom:16px;line-height:1.2;
-}
-.step-p{
-  font-size:14px;font-weight:300;line-height:1.85;color:var(--ink2);
-}
-
-/* CONTACT */
-.contact-row{
-  display:grid;grid-template-columns:1fr 1fr;
-  border:1px solid var(--rule);
-}
-.c-panel{
-  padding:72px 64px;
-}
-.c-panel:first-child{border-right:1px solid var(--rule)}
-.c-tag{
-  font-size:11px;font-weight:400;letter-spacing:0.18em;
-  text-transform:uppercase;color:var(--ink4);
-  display:block;margin-bottom:36px;
-}
-.c-h3{
-  font-family:var(--serif);font-size:clamp(28px,2.5vw,38px);
-  font-weight:300;line-height:1.15;color:var(--ink);
-  margin-bottom:20px;
-}
-.c-h3 em{font-style:italic}
-.c-p{
-  font-size:14px;font-weight:300;line-height:1.85;
-  color:var(--ink2);margin-bottom:40px;max-width:300px;
-}
-.c-link{
-  display:inline-flex;align-items:center;gap:8px;
-  font-size:13px;font-weight:400;letter-spacing:0.06em;
-  color:var(--ink);text-decoration:none;
-  border-bottom:1px solid var(--ink);padding-bottom:2px;
-  transition:opacity 0.2s;
-}
-.c-link:hover{opacity:0.55}
+/* FULL RULE */
+.full-rule{height:1px;background:var(--rule);width:100%}
 
 /* FOOTER (5-Column Stripe/Ramp Compression) */
 footer{border-top:1px solid var(--rule);padding:80px 56px 40px;background:var(--w)}
@@ -293,23 +185,16 @@ footer{border-top:1px solid var(--rule);padding:80px 56px 40px;background:var(--
 @media(max-width:960px){
   nav{padding:0 24px}
   .nav-right .nav-link:not(.nav-cta){display:none}
-  .hero{padding:0 24px}
+  .hero{padding:120px 24px 64px}
   .hero-h1{font-size:clamp(44px,10vw,80px)}
-  .hero-bottom{grid-template-columns:1fr 1fr}
-  .hero-stat:last-child{display:none}
-  .section,.process-inner{padding:96px 24px}
+  .section{padding:96px 24px}
   .about-grid{grid-template-columns:1fr;gap:56px}
-  .process-head{grid-template-columns:1fr;gap:28px;margin-bottom:64px}
-  .steps{grid-template-columns:1fr}
-  .step,.step:nth-child(2),.step:last-child{
-    padding:40px 0;border-right:none;border-bottom:1px solid var(--rule)
-  }
-  .step:last-child{border-bottom:none}
-  .contact-row{grid-template-columns:1fr}
-  .c-panel:first-child{border-right:none;border-bottom:1px solid var(--rule)}
-  .c-panel{padding:48px 32px}
-  .footer-inner{padding:28px 24px;flex-direction:column;gap:16px;text-align:center}
-  .f-right{flex-wrap:wrap;justify-content:center}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:40px}
+  .footer-top{flex-wrap:wrap}
+  .footer-bottom{flex-direction:column;gap:16px;align-items:flex-start}
+}
+@media(max-width:600px){
+  .footer-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -318,9 +203,9 @@ footer{border-top:1px solid var(--rule);padding:80px 56px 40px;background:var(--
 <nav id="nav">
   <a href="/" class="logo">Wells<span class="logo-plus">+</span>Daily</a>
   <div class="nav-right">
-    <a href="#about" class="nav-link">About</a>
-    <a href="#process" class="nav-link">Process</a>
-    <a href="#contact" class="nav-cta">Request Access</a>
+    <a href="/about.html" class="nav-link">About</a>
+    <a href="/how-it-works.html" class="nav-link">Process</a>
+    <a href="/contact.html" class="nav-cta">Request Access</a>
   </div>
 </nav>
 
@@ -328,39 +213,18 @@ footer{border-top:1px solid var(--rule);padding:80px 56px 40px;background:var(--
 <div style="max-width:1280px;margin:0 auto;">
   <div class="hero">
     <div class="hero-center">
-      <span class="eyebrow">Creator Partnership Brokerage</span>
-      <h1 class="hero-h1">The new standard<br>in <em>influencer</em><br>brokerage.</h1>
-      <p class="hero-sub">WellsPlusDaily provides structured contract execution, secure deal management, and precision talent matching for premium brands and creators.</p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn-dark">Request Private Access</a>
-        <a href="#about" class="btn-text">Learn More</a>
-      </div>
-    </div>
-    <div class="hero-bottom">
-      <div class="hero-stat">
-        <span class="stat-val">$5K–$15K</span>
-        <span class="stat-lbl">Average deal value</span>
-      </div>
-      <div class="hero-stat" style="padding-left:40px">
-        <span class="stat-val">End-to-End</span>
-        <span class="stat-lbl">Full lifecycle management</span>
-      </div>
-      <div class="hero-stat">
-        <span class="stat-val" style="font-size:22px;letter-spacing:0.04em">Brands &amp; Creators</span>
-        <span class="stat-lbl">Both sides, one firm</span>
-      </div>
+      <h1 class="hero-h1">A firm built for<br><em>high-value partnerships.</em></h1>
+      <p class="hero-sub">Setting execution free to build healthier partnerships.</p>
     </div>
   </div>
 </div>
 
 <div class="full-rule"></div>
 
-<!-- ABOUT -->
-<div class="section" id="about">
-  <span class="s-label">About</span>
+<!-- SECTION 1 -->
+<div class="section">
   <div class="about-grid">
     <div class="about-body">
-      <h2 class="about-h2">A firm built for<br><em>high-value</em> partnerships.</h2>
       <p>WellsPlusDaily is a tech-enabled brokerage that structures, negotiates, and closes sponsorship deals between brands and creators. We don't operate a marketplace — every engagement is handled directly, with a dedicated point of contact managing the full deal lifecycle.</p>
       <p>We work with brands across technology, e-commerce, finance, and consumer goods, matching them to creators whose audience profile, content quality, and commercial track record meet our standards. Deals are not facilitated on volume. Each engagement is evaluated and structured individually.</p>
       <p>Our process covers everything from initial creator identification and outreach, through rate negotiation and contract execution, to payment processing and campaign delivery. Both parties receive structured documentation at every stage.</p>
@@ -391,59 +255,6 @@ footer{border-top:1px solid var(--rule);padding:80px 56px 40px;background:var(--
 </div>
 
 <div class="full-rule"></div>
-
-<!-- PROCESS -->
-<div class="cream-band" id="process">
-  <div class="process-inner">
-    <span class="s-label">How It Works</span>
-    <div class="process-head">
-      <h2 class="process-h2">A structured process,<br><em>start to finish.</em></h2>
-      <p class="process-desc">Every engagement follows a defined sequence. There are no cold introductions, no ambiguous handoffs. We manage the full lifecycle so both parties arrive at each stage informed and prepared.</p>
-    </div>
-    <div class="steps">
-      <div class="step">
-        <span class="step-n">01</span>
-        <h3 class="step-h">Intake &amp; Matching</h3>
-        <p class="step-p">We assess your brand category, campaign objectives, and target audience profile. Creators are identified from our roster based on audience alignment, content category, and commercial track record — not surface-level niche overlap.</p>
-      </div>
-      <div class="step">
-        <span class="step-n">02</span>
-        <h3 class="step-h">Outreach &amp; Negotiation</h3>
-        <p class="step-p">We conduct direct outreach to selected creators on your behalf, present the campaign scope, and manage rate negotiation through to agreed terms. You receive a curated shortlist with proposed structures before any commitment is made.</p>
-      </div>
-      <div class="step">
-        <span class="step-n">03</span>
-        <h3 class="step-h">Contracts &amp; Delivery</h3>
-        <p class="step-p">Once terms are confirmed, we issue digital contracts through a structured signing process and coordinate payment milestones. We remain the point of contact through campaign delivery, final review, and sign-off.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="full-rule"></div>
-
-<!-- CONTACT -->
-<div class="section" id="contact">
-  <span class="s-label">Inquiries</span>
-  <div class="contact-row">
-    <div class="c-panel">
-      <span class="c-tag">For Brands</span>
-      <h3 class="c-h3">Looking to run a<br><em>creator campaign?</em></h3>
-      <p class="c-p">Share your brand category, campaign objective, and target audience. We'll evaluate fit and respond with a proposal for how we would approach the engagement.</p>
-      <a href="mailto:donj@wellsplusdaily.com?subject=Brand Partnership — Request for Access" class="c-link">
-        Request Private Access
-      </a>
-    </div>
-    <div class="c-panel">
-      <span class="c-tag">For Creators</span>
-      <h3 class="c-h3">Looking for<br><em>brand representation?</em></h3>
-      <p class="c-p">We work with creators who have an established audience and are open to structured brand partnerships. Reach out with your platform details, niche, and current rate expectations.</p>
-      <a href="mailto:donj@wellsplusdaily.com?subject=Creator Representation — Inquiry" class="c-link">
-        Inquire About Representation
-      </a>
-    </div>
-  </div>
-</div>
 
 <!-- FOOTER -->
 <footer>
