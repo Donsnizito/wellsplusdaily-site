@@ -308,8 +308,12 @@ footer{border-top:1px solid var(--rule);padding:80px 56px 40px;background:var(--
   .contact-row{grid-template-columns:1fr}
   .c-panel:first-child{border-right:none;border-bottom:1px solid var(--rule)}
   .c-panel{padding:48px 32px}
-  .footer-inner{padding:28px 24px;flex-direction:column;gap:16px;text-align:center}
-  .f-right{flex-wrap:wrap;justify-content:center}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:40px}
+  .footer-top{flex-wrap:wrap}
+  .footer-bottom{flex-direction:column;gap:16px;align-items:flex-start}
+}
+@media(max-width:600px){
+  .footer-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
