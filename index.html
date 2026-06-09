@@ -180,6 +180,59 @@ nav{
     }
   }
 </script>
+
+  <script>
+    window.klaroConfig = {
+        version: 1,
+        elementID: 'klaro',
+        styling: {
+            theme: ['light', 'bottom', 'wide']
+        },
+        noAutoLoad: false,
+        htmlTexts: true,
+        embedded: false,
+        groupByPurpose: true,
+        storageMethod: 'cookie',
+        cookieName: 'klaro',
+        cookieExpiresAfterDays: 365,
+        default: false,
+        mustConsent: false,
+        acceptAll: true,
+        hideDeclineAll: false,
+        hideLearnMore: false,
+        noticeAsModal: false,
+        translations: {
+            en: {
+                consentModal: {
+                    title: 'Privacy Preferences',
+                    description: 'We use cookies and similar technologies to help personalize content, tailor and measure ads, and provide a better experience. By clicking accept, you agree to this, as outlined in our Cookie Policy.',
+                },
+                consentNotice: {
+                    description: 'We use cookies and similar technologies to help personalize content, tailor and measure ads, and provide a better experience. By clicking accept, you agree to this, as outlined in our Cookie Policy.'
+                },
+                purposes: {
+                    analytics: 'Analytics',
+                    marketing: 'Marketing'
+                }
+            }
+        },
+        services: [
+            {
+                name: 'analytics',
+                title: 'Analytics',
+                purposes: ['analytics'],
+                required: false,
+            },
+            {
+                name: 'marketing',
+                title: 'Marketing',
+                purposes: ['marketing'],
+                required: false,
+            }
+        ]
+    };
+  </script>
+  <script defer type="application/javascript" src="https://cdn.kiprotect.com/klaro/v0.7.18/klaro.js"></script>
 </head>
 <body>
 
@@ -196,9 +249,9 @@ nav{
   <!-- We will pull the header up into this container dynamically below so it sits over the canvas -->
   <div class="w-full flex justify-center"><header id="global-header" class="fixed top-0 left-0 right-0 z-50 max-w-[100vw] w-full transition-all duration-300">
 
-      <div id="top-banner" class="w-full bg-[#0A0A0A] text-white px-4 py-4 flex items-center justify-center relative transition-all duration-300">
-        <p class="text-[length:var(--text-13)] font-medium text-neutral-300 text-center pr-8 sm:pr-0">
-          Introducing Brokerage OS — the intelligent operating system for premium brands and creators. 
+      <div id="top-banner" class="w-full bg-[#0A0A0A] text-white px-4 py-4 flex items-center justify-start relative transition-all duration-300">
+        <p class="text-[length:var(--text-13)] font-medium text-neutral-300 text-left pr-8 sm:pr-0 w-full">
+          Introducing Wells+ Daily — the intelligent operating system for premium brands and creators. 
           <a href="/how-it-works.html" class="text-white underline underline-offset-2 hover:text-[#DDF82A] transition-colors ml-1">Learn more <span aria-hidden="true">&rarr;</span></a>
         </p>
         <button id="close-banner" class="absolute right-4 text-neutral-400 hover:text-white transition-colors p-1" aria-label="Dismiss">
