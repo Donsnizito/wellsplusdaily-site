@@ -5,9 +5,9 @@ const footer = `<footer class="w-full max-w-7xl mt-12 mx-auto mb-8 pt-12 px-8 pb
     <div class="relative z-10 pt-0 pr-0 pb-0 pl-0">
       <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 border-white/10 border-b pb-12">
         <div class="lg:col-span-2">
-          <div class="flex items-center gap-1.5 mb-4">
-              <img src="/logo_white.png" alt="Logo" class="w-8 h-8 sm:w-10 sm:h-10 object-contain invert" style="mix-blend-mode: screen;" />
-              <h3 class="text-2xl sm:text-3xl text-white font-medium tracking-tighter" style="font-family: 'Red Hat Display', sans-serif;">wells+daily</h3>
+          <div class="flex items-center gap-2 mb-4">
+              <img src="/logo_white.png" alt="Logo" class="w-10 h-10 sm:w-12 sm:h-12 object-contain" />
+              <h3 class="text-3xl sm:text-4xl text-white font-semibold tracking-tighter" style="font-family: 'Red Hat Display', sans-serif;">wells+daily</h3>
             </div>
           <p class="text-lg sm:text-xl text-neutral-400 leading-relaxed max-w-2xl font-sans">The dual-contract enforcement system for premium brand and creator partnerships.</p>
         </div>
@@ -228,9 +228,9 @@ const nav = `<div class="w-full flex justify-center"><header id="global-header" 
         </button>
       </div>
       <nav class="flex max-w-7xl md:px-6 mr-auto ml-auto pt-4 pr-4 pb-4 pl-4 items-center justify-between">
-        <a href="/" class="flex items-center gap-1.5 group cursor-pointer">
-          <img src="/logo_white.png" alt="Logo" class="md:w-9 md:h-9 w-7 h-7 object-contain transition-transform duration-500 ease-out group-hover:rotate-[15deg] group-hover:scale-110 mix-blend-multiply" />
-          <span class="text-xl md:text-[22px] font-medium tracking-tight text-neutral-900" style="font-family: 'Red Hat Display', sans-serif;">wells+daily</span>
+        <a href="/" class="flex items-center gap-2 group cursor-pointer">
+          <img src="/logo_white.png" alt="Logo" class="md:w-11 md:h-11 w-9 h-9 object-contain transition-transform duration-500 ease-out group-hover:rotate-[15deg] group-hover:scale-110" />
+          <span class="text-[22px] md:text-[26px] font-semibold tracking-tight text-neutral-900" style="font-family: 'Red Hat Display', sans-serif;">wells+daily</span>
         </a>
 
         <button id="menuBtn" class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-black/10 bg-black/5 md:hidden">
@@ -320,7 +320,7 @@ function buildHtml(page) {
 <title>WellsPlusDaily — ${page.title}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Red+Hat+Display:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Red+Hat+Display:wght@500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <style>${css}</style>
 
