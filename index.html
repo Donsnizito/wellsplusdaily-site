@@ -523,36 +523,189 @@ nav{
 <!-- ABOUT -->
 <div class="section" id="about">
   <span class="s-label">About</span>
-  <div class="about-grid">
+  <div class="max-w-4xl mb-12">
     <div class="about-body">
       <h2 class="about-h2">A firm built for<br><em>high-value</em> partnerships.</h2>
       <p>WellsPlusDaily is a tech-enabled brokerage that structures, negotiates, and closes sponsorship deals between brands and creators. We don't operate a marketplace — every engagement is handled directly, with a dedicated point of contact managing the full deal lifecycle.</p>
       <p>We work with brands across technology, e-commerce, finance, and consumer goods, matching them to creators whose audience profile, content quality, and commercial track record meet our standards. Deals are not facilitated on volume. Each engagement is evaluated and structured individually.</p>
       <p>Our process covers everything from initial creator identification and outreach, through rate negotiation and contract execution, to payment processing and campaign delivery. Both parties receive structured documentation at every stage.</p>
     </div>
-    <div class="services">
-      <div class="srv">
-        <span class="srv-name">Brand Partnerships</span>
-        <span class="srv-tag">Matching, outreach &amp; deal structure</span>
-      </div>
-      <div class="srv">
-        <span class="srv-name">Creator Campaigns</span>
-        <span class="srv-tag">Roster curation &amp; rate negotiation</span>
-      </div>
-      <div class="srv">
-        <span class="srv-name">Contract Execution</span>
-        <span class="srv-tag">Digital signing &amp; documented terms</span>
-      </div>
-      <div class="srv">
-        <span class="srv-name">Payment Processing</span>
-        <span class="srv-tag">Secure milestones &amp; escrow management</span>
-      </div>
-      <div class="srv">
-        <span class="srv-name">Campaign Oversight</span>
-        <span class="srv-tag">Delivery tracking &amp; brand compliance</span>
-      </div>
+  </div>
+
+  <!-- Animated Cards Section -->
+  <div class="relative rounded-[2rem] overflow-hidden border border-black/5 bg-[#F8F8F7] w-full mt-8 group/cards-section shadow-sm">
+    <!-- Canvas Animation Background -->
+    <canvas id="cards-canvas" class="absolute inset-0 z-0 w-full h-full opacity-60 transition-opacity duration-700 group-hover/cards-section:opacity-100"></canvas>
+    
+    <div class="relative z-10 grid grid-cols-1 md:grid-cols-5 gap-px bg-black/5">
+       <!-- Card 1 -->
+       <a href="/brands.html" class="relative overflow-hidden bg-white/80 backdrop-blur-md flex flex-col items-start p-6 lg:p-8 cursor-pointer hover:bg-white/95 transition-all duration-300 h-full group">
+          <div class="flex items-start justify-between w-full mb-6">
+            <h3 class="text-lg font-semibold text-neutral-900 tracking-tight leading-snug">Brand Partnerships</h3>
+            <div class="flex size-8 shrink-0 items-center justify-center rounded-full bg-white border border-black/10 group-hover:bg-[#DDF82A] group-hover:border-[#DDF82A] transition-colors">
+              <svg class="w-4 h-4 text-neutral-900" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </div>
+          </div>
+          <div class="mt-auto pt-8">
+              <p class="text-sm font-medium text-neutral-900 mb-2">Matching, outreach &amp; deal structure</p>
+              <p class="text-[13px] text-neutral-500 leading-relaxed">We evaluate your brand category, target audience, and campaign objectives. Our team conducts direct outreach to highly-vetted creators to secure the perfect match. Every engagement is structured individually to guarantee alignment and performance.</p>
+          </div>
+       </a>
+
+       <!-- Card 2 -->
+       <a href="#" class="relative overflow-hidden bg-white/80 backdrop-blur-md flex flex-col items-start p-6 lg:p-8 cursor-pointer hover:bg-white/95 transition-all duration-300 h-full group">
+          <div class="flex items-start justify-between w-full mb-6">
+            <h3 class="text-lg font-semibold text-neutral-900 tracking-tight leading-snug">Creator Campaigns</h3>
+            <div class="flex size-8 shrink-0 items-center justify-center rounded-full bg-white border border-black/10 group-hover:bg-[#DDF82A] group-hover:border-[#DDF82A] transition-colors">
+              <svg class="w-4 h-4 text-neutral-900" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </div>
+          </div>
+          <div class="mt-auto pt-8">
+              <p class="text-sm font-medium text-neutral-900 mb-2">Roster curation &amp; rate negotiation</p>
+              <p class="text-[13px] text-neutral-500 leading-relaxed">We represent a curated roster of creators who meet strict audience and content standards. Our dedicated managers handle all rate negotiations to secure fair, market-adjusted pricing. We ensure both sides arrive at the table informed and ready to execute.</p>
+          </div>
+       </a>
+
+       <!-- Card 3 -->
+       <a href="/guarantee.html" class="relative overflow-hidden bg-white/80 backdrop-blur-md flex flex-col items-start p-6 lg:p-8 cursor-pointer hover:bg-white/95 transition-all duration-300 h-full group">
+          <div class="flex items-start justify-between w-full mb-6">
+            <h3 class="text-lg font-semibold text-neutral-900 tracking-tight leading-snug">Contract Execution</h3>
+            <div class="flex size-8 shrink-0 items-center justify-center rounded-full bg-white border border-black/10 group-hover:bg-[#DDF82A] group-hover:border-[#DDF82A] transition-colors">
+              <svg class="w-4 h-4 text-neutral-900" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </div>
+          </div>
+          <div class="mt-auto pt-8">
+              <p class="text-sm font-medium text-neutral-900 mb-2">Digital signing &amp; documented terms</p>
+              <p class="text-[13px] text-neutral-500 leading-relaxed">Ambiguity is the enemy of execution. We issue comprehensive digital contracts to lock in the Technical Brief before any work begins. Every deliverable, timeline, and compliance requirement is legally bound.</p>
+          </div>
+       </a>
+
+       <!-- Card 4 -->
+       <a href="/how-it-works.html" class="relative overflow-hidden bg-white/80 backdrop-blur-md flex flex-col items-start p-6 lg:p-8 cursor-pointer hover:bg-white/95 transition-all duration-300 h-full group">
+          <div class="flex items-start justify-between w-full mb-6">
+            <h3 class="text-lg font-semibold text-neutral-900 tracking-tight leading-snug">Financial Operations</h3>
+            <div class="flex size-8 shrink-0 items-center justify-center rounded-full bg-white border border-black/10 group-hover:bg-[#DDF82A] group-hover:border-[#DDF82A] transition-colors">
+              <svg class="w-4 h-4 text-neutral-900" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </div>
+          </div>
+          <div class="mt-auto pt-8">
+              <p class="text-sm font-medium text-neutral-900 mb-2">Secure milestones &amp; payout routing</p>
+              <p class="text-[13px] text-neutral-500 leading-relaxed">Creator compensation is strictly tied to validated delivery metrics. We manage the 80/20 payout structure, releasing initial funds upon delivery and holding the remainder for compliance validation. All payments are routed securely through regulated financial infrastructure.</p>
+          </div>
+       </a>
+
+       <!-- Card 5 -->
+       <a href="/escalation.html" class="relative overflow-hidden bg-white/80 backdrop-blur-md flex flex-col items-start p-6 lg:p-8 cursor-pointer hover:bg-white/95 transition-all duration-300 h-full group">
+          <div class="flex items-start justify-between w-full mb-6">
+            <h3 class="text-lg font-semibold text-neutral-900 tracking-tight leading-snug">Escalation &amp; Tracking</h3>
+            <div class="flex size-8 shrink-0 items-center justify-center rounded-full bg-white border border-black/10 group-hover:bg-[#DDF82A] group-hover:border-[#DDF82A] transition-colors">
+              <svg class="w-4 h-4 text-neutral-900" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </div>
+          </div>
+          <div class="mt-auto pt-8">
+              <p class="text-sm font-medium text-neutral-900 mb-2">Delivery tracking &amp; brand compliance</p>
+              <p class="text-[13px] text-neutral-500 leading-relaxed">Human curation alone cannot scale. We ingest public metadata via social APIs to continuously verify timeline adherence and FTC disclosure visibility. Any deviations are immediately routed through our highly structured escalation map for rapid resolution.</p>
+          </div>
+       </a>
     </div>
   </div>
+
+  <script>
+    (function() {
+      const canvas = document.getElementById('cards-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let width, height;
+      let time = 0;
+      
+      let mouseX = -1000;
+      let mouseY = -1000;
+      let targetMouseX = -1000;
+      let targetMouseY = -1000;
+
+      function resize() {
+          const parent = canvas.parentElement;
+          width = canvas.width = parent.clientWidth;
+          height = canvas.height = parent.clientHeight;
+      }
+
+      window.addEventListener('resize', resize);
+      
+      canvas.parentElement.addEventListener('mousemove', (e) => {
+          const rect = canvas.getBoundingClientRect();
+          targetMouseX = e.clientX - rect.left;
+          targetMouseY = e.clientY - rect.top;
+      });
+      
+      canvas.parentElement.addEventListener('mouseleave', () => {
+          targetMouseX = -1000;
+          targetMouseY = -1000;
+      });
+
+      resize();
+
+      function draw() {
+          ctx.clearRect(0, 0, width, height);
+          time += 0.003;
+
+          mouseX += (targetMouseX - mouseX) * 0.08;
+          mouseY += (targetMouseY - mouseY) * 0.08;
+
+          const gradient = ctx.createLinearGradient(0, 0, width, 0);
+          gradient.addColorStop(0, 'rgba(221, 248, 42, 0.6)'); // Lime green
+          gradient.addColorStop(0.5, 'rgba(163, 230, 53, 0.6)'); // Green
+          gradient.addColorStop(1, 'rgba(253, 224, 71, 0.6)'); // Yellow
+
+          ctx.strokeStyle = gradient;
+          ctx.globalCompositeOperation = 'multiply';
+
+          const numLines = 40;
+          const centerY = height * 0.5;
+
+          for (let i = 0; i < numLines; i++) {
+              ctx.beginPath();
+              
+              const z = Math.sin(i * 0.1 + time) * 0.5 + 0.5;
+              ctx.lineWidth = 0.5 + z * 1.5;
+              ctx.globalAlpha = 0.2 + z * 0.4;
+
+              for (let x = 0; x <= width; x += 20) {
+                  const nx = x / width;
+                  
+                  const wave1 = Math.sin(nx * 4 - time * 1.5 + i * 0.04) * (height * 0.1) * nx;
+                  const wave2 = Math.cos(nx * 2.5 + time * 0.8 - i * 0.06) * (height * 0.2) * (1 - nx);
+                  
+                  const pinch = Math.pow(nx - 0.5, 2) * 2; 
+                  const spread = (height * 0.4) * pinch + 20;
+
+                  const yOffset = wave1 + wave2;
+                  let y = centerY + yOffset + (i - numLines / 2) * spread * 0.05;
+
+                  const dx = x - mouseX;
+                  const dy = y - mouseY;
+                  const distance = Math.sqrt(dx * dx + dy * dy);
+                  const interactionRadius = 200;
+                  
+                  if (distance < interactionRadius) {
+                      const force = Math.pow((interactionRadius - distance) / interactionRadius, 2);
+                      y += (dy / distance) * force * 40; 
+                  }
+
+                  if (x === 0) {
+                      ctx.moveTo(x, y);
+                  } else {
+                      ctx.lineTo(x, y);
+                  }
+              }
+              ctx.stroke();
+          }
+
+          requestAnimationFrame(draw);
+      }
+
+      draw();
+    })();
+  </script>
 </div>
 
 <div class="full-rule"></div>
