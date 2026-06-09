@@ -401,90 +401,119 @@ nav{
   </script>
 </div>
 
-<!-- LOGO TICKER -->
-<section class="z-10 sm:py-16 pt-8 pb-8 relative border-t border-b border-black/5 bg-[#F8F8F7]">
-    <div class="sm:px-6 lg:px-8 max-w-[1280px] mx-auto pr-4 pl-4">
-        <div class="text-center mb-8">
-            <p class="uppercase text-[length:var(--text-12)] font-semibold text-neutral-500 tracking-[0.2em]">Trusted by teams at</p>
+
+<!-- LOGO GRID REPLACEMENT -->
+<div id="customer-grid-section" class="max-w-[1280px] mx-auto px-6 w-full py-16 sm:py-24 relative z-10 pointer-events-auto">
+  <style>
+    @keyframes fade1 {
+      0%, 45% { opacity: 1; }
+      50%, 95% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @keyframes fade2 {
+      0%, 45% { opacity: 0; }
+      50%, 95% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    .animate-logo-fade-1 { animation: fade1 8s infinite; }
+    .animate-logo-fade-2 { animation: fade2 8s infinite; }
+    
+    .delay-1 { animation-delay: 0s; }
+    .delay-2 { animation-delay: 2.5s; }
+    .delay-3 { animation-delay: 5s; }
+    .delay-4 { animation-delay: 1.5s; }
+    .delay-5 { animation-delay: 4s; }
+    .delay-6 { animation-delay: 6.5s; }
+  </style>
+
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-px bg-neutral-200/50 rounded-2xl overflow-hidden border border-black/5 shadow-sm">
+    
+    <!-- Text Block -->
+    <div class="flex flex-col justify-between gap-12 bg-[#F8F8F7] p-8 lg:p-10 col-span-1">
+      <div>
+        <p class="text-[length:var(--text-24)] font-medium tracking-tight text-neutral-900 text-balance leading-[1.4]">
+          Join the world’s most ambitious brands <span class="text-neutral-500">growing faster with intelligent contract execution.</span>
+        </p>
+      </div>
+      <a class="group flex items-center gap-2 w-fit text-[length:var(--text-14)] font-semibold text-neutral-500 hover:text-neutral-900 transition-colors" href="/how-it-works.html">
+        Read the report
+        <div class="overflow-hidden relative flex items-center justify-center">
+            <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.33325 8.00017H12.6665M12.6665 8.00017L7.99994 3.3335M12.6665 8.00017L7.99994 12.6669" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
         </div>
-
-        <!-- Ticker Container -->
-        <div class="overflow-hidden relative"
-            style="mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);">
-
-            <!-- Animated Ticker -->
-            <div class="ticker-track flex gap-16 pt-2 pb-2 items-center">
-                <!-- First set of logos -->
-                <div class="flex gap-16 shrink-0 items-center">
-                    <div class="flex items-center gap-3 text-neutral-400 hover:text-neutral-900 transition-colors duration-300 cursor-pointer">
-                        <span class="text-xl md:text-2xl font-normal tracking-tighter">TechFlow</span>
-                    </div>
-                    <div class="flex items-center gap-3 text-neutral-400 hover:text-neutral-900 transition-colors duration-300 cursor-pointer">
-                        <span class="text-xl md:text-2xl font-bold tracking-tighter">Nexus Labs</span>
-                    </div>
-                    <div class="flex items-center gap-3 text-neutral-400 hover:text-neutral-900 transition-colors duration-300 cursor-pointer">
-                        <span class="text-xl md:text-2xl font-semibold tracking-tighter">DataSync</span>
-                    </div>
-                    <div class="flex items-center gap-3 text-neutral-400 hover:text-neutral-900 transition-colors duration-300 cursor-pointer">
-                        <span class="text-xl md:text-2xl font-normal tracking-tighter">VisionCorp</span>
-                    </div>
-                    <div class="flex items-center gap-3 text-neutral-400 hover:text-neutral-900 transition-colors duration-300 cursor-pointer">
-                        <span class="text-xl md:text-2xl font-semibold tracking-tighter">CloudBase</span>
-                    </div>
-                    <div class="flex items-center gap-3 text-neutral-400 hover:text-neutral-900 transition-colors duration-300 cursor-pointer">
-                        <span class="text-xl md:text-2xl font-normal tracking-tighter">InnovateTech</span>
-                    </div>
-                    <div class="flex items-center gap-3 text-neutral-400 hover:text-neutral-900 transition-colors duration-300 cursor-pointer">
-                        <span class="text-xl md:text-2xl font-bold tracking-tighter">FlowState</span>
-                    </div>
-                </div>
-
-                <!-- Duplicate set for seamless loop -->
-                <div class="flex items-center gap-16 shrink-0">
-                    <div class="flex items-center gap-3 text-neutral-400 hover:text-neutral-900 transition-colors duration-300 cursor-pointer">
-                        <span class="text-xl md:text-2xl font-normal tracking-tighter">TechFlow</span>
-                    </div>
-                    <div class="flex items-center gap-3 text-neutral-400 hover:text-neutral-900 transition-colors duration-300 cursor-pointer">
-                        <span class="text-xl md:text-2xl font-bold tracking-tighter">Nexus Labs</span>
-                    </div>
-                    <div class="flex items-center gap-3 text-neutral-400 hover:text-neutral-900 transition-colors duration-300 cursor-pointer">
-                        <span class="text-xl md:text-2xl font-semibold tracking-tighter">DataSync</span>
-                    </div>
-                    <div class="flex items-center gap-3 text-neutral-400 hover:text-neutral-900 transition-colors duration-300 cursor-pointer">
-                        <span class="text-xl md:text-2xl font-normal tracking-tighter">VisionCorp</span>
-                    </div>
-                    <div class="flex items-center gap-3 text-neutral-400 hover:text-neutral-900 transition-colors duration-300 cursor-pointer">
-                        <span class="text-xl md:text-2xl font-semibold tracking-tighter">CloudBase</span>
-                    </div>
-                    <div class="flex items-center gap-3 text-neutral-400 hover:text-neutral-900 transition-colors duration-300 cursor-pointer">
-                        <span class="text-xl md:text-2xl font-normal tracking-tighter">InnovateTech</span>
-                    </div>
-                    <div class="flex items-center gap-3 text-neutral-400 hover:text-neutral-900 transition-colors duration-300 cursor-pointer">
-                        <span class="text-xl md:text-2xl font-bold tracking-tighter">FlowState</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </a>
     </div>
 
-    <style>
-        @keyframes customTicker {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-        .ticker-track {
-            animation: customTicker 40s linear infinite;
-            width: max-content;
-        }
-        .ticker-track:hover {
-            animation-play-state: paused;
-        }
-    </style>
-</section>
+    <!-- Grid tiles -->
+    <div class="col-span-1 lg:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-px bg-neutral-200/50">
+      
+      <!-- Tile 1 -->
+      <div class="bg-white flex items-center justify-center p-6 lg:p-8 aspect-[4/3] sm:aspect-auto sm:h-[180px] relative overflow-hidden group transition-colors">
+        <div class="absolute inset-0 flex items-center justify-center p-10 lg:p-14 opacity-100 transition-opacity duration-1000 animate-logo-fade-1 delay-1 text-neutral-400 group-hover:text-neutral-900">
+          <div class="w-full h-full bg-current transition-colors duration-300" style="mask-image: url('https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg'); mask-size: contain; mask-position: center; mask-repeat: no-repeat; -webkit-mask-image: url('https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg'); -webkit-mask-size: contain; -webkit-mask-position: center; -webkit-mask-repeat: no-repeat;"></div>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center p-10 lg:p-14 opacity-0 transition-opacity duration-1000 animate-logo-fade-2 delay-1 text-neutral-400 group-hover:text-neutral-900">
+          <div class="w-full h-full bg-current transition-colors duration-300" style="mask-image: url('https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg'); mask-size: contain; mask-position: center; mask-repeat: no-repeat; -webkit-mask-image: url('https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg'); -webkit-mask-size: contain; -webkit-mask-position: center; -webkit-mask-repeat: no-repeat;"></div>
+        </div>
+      </div>
+  
+      <!-- Tile 2 -->
+      <div class="bg-white flex items-center justify-center p-6 lg:p-8 aspect-[4/3] sm:aspect-auto sm:h-[180px] relative overflow-hidden group transition-colors">
+        <div class="absolute inset-0 flex items-center justify-center p-10 lg:p-14 opacity-100 transition-opacity duration-1000 animate-logo-fade-1 delay-2 text-neutral-400 group-hover:text-neutral-900">
+          <div class="w-full h-full bg-current transition-colors duration-300" style="mask-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg'); mask-size: contain; mask-position: center; mask-repeat: no-repeat; -webkit-mask-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg'); -webkit-mask-size: contain; -webkit-mask-position: center; -webkit-mask-repeat: no-repeat;"></div>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center p-10 lg:p-14 opacity-0 transition-opacity duration-1000 animate-logo-fade-2 delay-2 text-neutral-400 group-hover:text-neutral-900">
+          <div class="w-full h-full bg-current transition-colors duration-300" style="mask-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg'); mask-size: contain; mask-position: center; mask-repeat: no-repeat; -webkit-mask-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg'); -webkit-mask-size: contain; -webkit-mask-position: center; -webkit-mask-repeat: no-repeat;"></div>
+        </div>
+      </div>
+  
+      <!-- Tile 3 -->
+      <div class="bg-white flex items-center justify-center p-6 lg:p-8 aspect-[4/3] sm:aspect-auto sm:h-[180px] relative overflow-hidden group transition-colors">
+        <div class="absolute inset-0 flex items-center justify-center p-10 lg:p-14 opacity-100 transition-opacity duration-1000 animate-logo-fade-1 delay-3 text-neutral-400 group-hover:text-neutral-900">
+          <div class="w-full h-full bg-current transition-colors duration-300" style="mask-image: url('https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg'); mask-size: contain; mask-position: center; mask-repeat: no-repeat; -webkit-mask-image: url('https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg'); -webkit-mask-size: contain; -webkit-mask-position: center; -webkit-mask-repeat: no-repeat;"></div>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center p-10 lg:p-14 opacity-0 transition-opacity duration-1000 animate-logo-fade-2 delay-3 text-neutral-400 group-hover:text-neutral-900">
+          <div class="w-full h-full bg-current transition-colors duration-300" style="mask-image: url('https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg'); mask-size: contain; mask-position: center; mask-repeat: no-repeat; -webkit-mask-image: url('https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg'); -webkit-mask-size: contain; -webkit-mask-position: center; -webkit-mask-repeat: no-repeat;"></div>
+        </div>
+      </div>
+  
+      <!-- Tile 4 -->
+      <div class="bg-white flex items-center justify-center p-6 lg:p-8 aspect-[4/3] sm:aspect-auto sm:h-[180px] relative overflow-hidden group transition-colors">
+        <div class="absolute inset-0 flex items-center justify-center p-10 lg:p-14 opacity-100 transition-opacity duration-1000 animate-logo-fade-1 delay-4 text-neutral-400 group-hover:text-neutral-900">
+          <div class="w-full h-full bg-current transition-colors duration-300" style="mask-image: url('https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg'); mask-size: contain; mask-position: center; mask-repeat: no-repeat; -webkit-mask-image: url('https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg'); -webkit-mask-size: contain; -webkit-mask-position: center; -webkit-mask-repeat: no-repeat;"></div>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center p-10 lg:p-14 opacity-0 transition-opacity duration-1000 animate-logo-fade-2 delay-4 text-neutral-400 group-hover:text-neutral-900">
+          <div class="w-full h-full bg-current transition-colors duration-300" style="mask-image: url('https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_B%C3%A9lo.svg'); mask-size: contain; mask-position: center; mask-repeat: no-repeat; -webkit-mask-image: url('https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_B%C3%A9lo.svg'); -webkit-mask-size: contain; -webkit-mask-position: center; -webkit-mask-repeat: no-repeat;"></div>
+        </div>
+      </div>
+  
+      <!-- Tile 5 -->
+      <div class="bg-white flex items-center justify-center p-6 lg:p-8 aspect-[4/3] sm:aspect-auto sm:h-[180px] relative overflow-hidden group transition-colors">
+        <div class="absolute inset-0 flex items-center justify-center p-10 lg:p-14 opacity-100 transition-opacity duration-1000 animate-logo-fade-1 delay-5 text-neutral-400 group-hover:text-neutral-900">
+          <div class="w-full h-full bg-current transition-colors duration-300" style="mask-image: url('https://upload.wikimedia.org/wikipedia/commons/c/cc/Uber_logo_2018.svg'); mask-size: contain; mask-position: center; mask-repeat: no-repeat; -webkit-mask-image: url('https://upload.wikimedia.org/wikipedia/commons/c/cc/Uber_logo_2018.svg'); -webkit-mask-size: contain; -webkit-mask-position: center; -webkit-mask-repeat: no-repeat;"></div>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center p-10 lg:p-14 opacity-0 transition-opacity duration-1000 animate-logo-fade-2 delay-5 text-neutral-400 group-hover:text-neutral-900">
+          <div class="w-full h-full bg-current transition-colors duration-300" style="mask-image: url('https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg'); mask-size: contain; mask-position: center; mask-repeat: no-repeat; -webkit-mask-image: url('https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg'); -webkit-mask-size: contain; -webkit-mask-position: center; -webkit-mask-repeat: no-repeat;"></div>
+        </div>
+      </div>
+  
+      <!-- Tile 6 -->
+      <div class="bg-white flex items-center justify-center p-6 lg:p-8 aspect-[4/3] sm:aspect-auto sm:h-[180px] relative overflow-hidden group transition-colors">
+        <div class="absolute inset-0 flex items-center justify-center p-10 lg:p-14 opacity-100 transition-opacity duration-1000 animate-logo-fade-1 delay-6 text-neutral-400 group-hover:text-neutral-900">
+          <div class="w-full h-full bg-current transition-colors duration-300" style="mask-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Sony_logo.svg'); mask-size: contain; mask-position: center; mask-repeat: no-repeat; -webkit-mask-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Sony_logo.svg'); -webkit-mask-size: contain; -webkit-mask-position: center; -webkit-mask-repeat: no-repeat;"></div>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center p-10 lg:p-14 opacity-0 transition-opacity duration-1000 animate-logo-fade-2 delay-6 text-neutral-400 group-hover:text-neutral-900">
+          <div class="w-full h-full bg-current transition-colors duration-300" style="mask-image: url('https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg'); mask-size: contain; mask-position: center; mask-repeat: no-repeat; -webkit-mask-image: url('https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg'); -webkit-mask-size: contain; -webkit-mask-position: center; -webkit-mask-repeat: no-repeat;"></div>
+        </div>
+      </div>
+  
+    </div>
+
+  </div>
+</div>
+<!-- END LOGO GRID -->
+
 
 </div>
 
