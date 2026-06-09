@@ -18,7 +18,7 @@ const userHeader = `<div class="w-full flex justify-center"><header class="relat
         <div id="navLinks" class="hidden items-center gap-8 md:flex">
           <a href="/how-it-works.html" class="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition">How it works</a>
           <a href="/guarantee.html" class="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition">Guarantee</a>
-          <a href="/tech-software.html" class="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition">Categories</a>
+          <a href="/brands.html" class="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition">Categories</a>
           <a href="/pricing.html" class="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition">Pricing</a>
           <div class="hidden h-6 w-px bg-black/10 md:block"></div>
           <a href="/roster.html" class="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition">Log in</a>
@@ -33,7 +33,7 @@ const userHeader = `<div class="w-full flex justify-center"><header class="relat
         <div class="space-y-1 rounded-xl border border-black/10 bg-white/50 p-3 backdrop-blur">
           <a class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 hover:bg-black/5" href="/how-it-works.html">How it works</a>
           <a class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 hover:bg-black/5" href="/guarantee.html">Guarantee</a>
-          <a class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 hover:bg-black/5" href="/tech-software.html">Categories</a>
+          <a class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 hover:bg-black/5" href="/brands.html">Categories</a>
           <a class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 hover:bg-black/5" href="/pricing.html">Pricing</a>
           <div class="my-2 h-px w-full bg-black/10"></div>
           <div class="flex items-center gap-2">

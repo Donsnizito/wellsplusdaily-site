@@ -20,7 +20,7 @@ const footer = `<footer>
       <div class="f-col">
         <span class="f-col-title">Categories we underwrite</span>
         <ul class="f-list">
-          <li><a href="/tech-software.html">Tech &amp; Software</a></li>
+          <li><a href="/brands.html">Brands</a></li>
           <li><a href="/lifestyle.html">Lifestyle &amp; Personal</a></li>
           <li><a href="/content.html">Content &amp; Media</a></li>
         </ul>
