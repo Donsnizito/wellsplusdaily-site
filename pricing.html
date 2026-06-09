@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
 <style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --w:#FDFCFA;--ink:#141210;--ink2:#3A3835;--ink3:#787571;--ink4:#B4B1AC;
@@ -143,61 +144,135 @@ footer{border-top:1px solid var(--rule);padding:80px 56px 40px;background:var(--
   </div>
 </div>
 
-<footer>
-  <div class="footer-inner">
-    <div class="footer-top">
-      <a href="/about.html">About</a>
-      <a href="/roster.html">Customers</a>
-      <a href="/escalation.html">Help</a>
-    </div>
-    <div class="footer-grid">
-      <div class="f-col">
-        <span class="f-col-title">What we run</span>
-        <ul class="f-list">
-          <li><a href="/how-it-works.html">How it works</a></li>
-          <li><a href="/guarantee.html">The bounded guarantee</a></li>
-          <li><a href="/escalation.html">The escalation map</a></li>
-          <li><a href="/curation.html">Curation as underwriting</a></li>
-        </ul>
+<footer class="w-full max-w-7xl mt-24 mr-auto mb-24 ml-auto pt-12 pr-8 pb-10 pl-8">
+  <div class="relative">
+    <div class="relative z-10 pt-0 pr-0 pb-0 pl-0">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 border-neutral-200 border-b pb-12">
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-2 mb-4">
+            <h3 class="text-2xl sm:text-3xl text-neutral-900 font-bricolage font-medium tracking-tighter" style="font-family: 'Cormorant Garamond', serif;">Wells+Daily
+            </h3>
+          </div>
+          <p class="text-lg sm:text-xl text-neutral-700 leading-relaxed max-w-2xl font-sans">The dual-contract enforcement system for premium brand and creator partnerships.</p>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="lg:col-span-1">
+          <h4 class="text-neutral-900 font-medium mb-4 font-sans">Categories</h4>
+          <ul class="space-y-2 text-sm text-neutral-600">
+            <li class=""><a href="/tech-software.html" class="hover:text-emerald-600 transition font-sans">Tech &amp; Software</a></li>
+            <li class=""><a href="/lifestyle.html" class="hover:text-emerald-600 transition font-sans">Lifestyle &amp; Personal</a></li>
+            <li class=""><a href="/content.html" class="hover:text-emerald-600 transition font-sans">Content &amp; Media</a></li>
+            <li class=""><a href="/how-it-works.html" class="hover:text-emerald-600 transition font-sans">How it works</a></li>
+            <li><a href="/guarantee.html" class="hover:text-emerald-600 transition font-sans">The Bounded Guarantee</a></li>
+          </ul>
+        </div>
+
+        <!-- Company Info -->
+        <div class="lg:col-span-1">
+          <h4 class="text-neutral-900 font-medium mb-4 font-sans">Company &amp; Legal</h4>
+          <ul class="space-y-2 text-sm text-neutral-600">
+            <li class=""><a href="/about.html" class="hover:text-emerald-600 transition font-sans">About Us</a></li>
+            <li class=""><a href="/escalation.html" class="hover:text-emerald-600 transition font-sans">Escalation Map</a></li>
+            <li class=""><a href="/terms.html" class="hover:text-emerald-600 transition font-sans">Terms of Service</a></li>
+            <li class=""><a href="/privacy.html" class="hover:text-emerald-600 transition font-sans">Privacy Policy</a></li>
+            <li class=""><a href="/contact.html" class="hover:text-emerald-600 transition font-sans">Contact</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="f-col">
-        <span class="f-col-title">Categories we underwrite</span>
-        <ul class="f-list">
-          <li><a href="/tech-software.html">Tech &amp; Software</a></li>
-          <li><a href="/lifestyle.html">Lifestyle &amp; Personal</a></li>
-          <li><a href="/content.html">Content &amp; Media</a></li>
-        </ul>
+
+      <!-- Contact Section -->
+      <div id="contact" class="mt-8 rounded-2xl border border-neutral-200 bg-white p-5 sm:p-6 md:p-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div class="space-y-4">
+            <div class="inline-flex items-center gap-2 ring-1 ring-emerald-200 text-xs text-emerald-800 bg-emerald-100 rounded-full pt-1.5 pr-3 pb-1.5 pl-3 font-sans">
+              <span class="h-1.5 w-1.5 rounded-full bg-emerald-600 animate-pulse"></span>
+              Now accepting campaigns
+            </div>
+            <h4 class="text-xl sm:text-2xl text-neutral-900 font-bricolage font-medium tracking-tighter" style="font-family: 'Cormorant Garamond', serif;">Ready to enforce execution?</h4>
+            <ul class="text-sm text-neutral-700 space-y-3">
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="lucide lucide-check w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" style="stroke-width: 1.5"><path d="M20 6 9 17l-5-5" class=""></path></svg>
+                <span class="font-sans">Curated roster on every engagement</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="lucide lucide-check w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" style="stroke-width: 1.5"><path d="M20 6 9 17l-5-5" class=""></path></svg>
+                <span class="font-sans">100% credit-and-replacement guarantee</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="lucide lucide-check w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" style="stroke-width: 1.5"><path d="M20 6 9 17l-5-5" class=""></path></svg>
+                <span class="font-sans">Bounded 90-day execution window</span>
+              </li>
+            </ul>
+            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 pt-2 text-sm">
+              <a href="mailto:ops@wellsplusdaily.com" class="inline-flex items-center gap-2 text-neutral-700 hover:text-emerald-600 transition font-sans">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="mail" class="lucide lucide-mail w-4 h-4" style="stroke-width: 1.5"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" class=""></path><rect x="2" y="4" width="20" height="16" rx="2" class=""></rect></svg>
+                ops@wellsplusdaily.com
+              </a>
+            </div>
+          </div>
+
+          <form class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="sm:col-span-1">
+              <label class="block text-xs font-medium text-neutral-700 mb-2 font-sans">Name</label>
+              <input type="text" required="" placeholder="Your name" class="w-full placeholder-neutral-500 outline-none focus:ring-2 focus:ring-emerald-400/60 focus:border-emerald-300 transition text-sm text-neutral-900 bg-white border-neutral-200 border rounded-xl pt-2.5 pr-3 pb-2.5 pl-3">
+            </div>
+            <div class="sm:col-span-1">
+              <label class="block text-xs font-medium text-neutral-700 mb-2 font-sans">Email</label>
+              <input type="email" required="" placeholder="you@company.com" class="w-full placeholder-neutral-500 outline-none focus:ring-2 focus:ring-emerald-400/60 focus:border-emerald-300 transition text-sm text-neutral-900 bg-white border-neutral-200 border rounded-xl pt-2.5 pr-3 pb-2.5 pl-3">
+            </div>
+            <div class="sm:col-span-1">
+              <label class="block text-xs font-medium text-neutral-700 mb-2 font-sans">Company</label>
+              <input type="text" placeholder="Company name" class="w-full placeholder-neutral-500 outline-none focus:ring-2 focus:ring-emerald-400/60 focus:border-emerald-300 transition text-sm text-neutral-900 bg-white border-neutral-200 border rounded-xl pt-2.5 pr-3 pb-2.5 pl-3">
+            </div>
+            <div class="sm:col-span-1">
+              <label class="block text-xs font-medium text-neutral-700 mb-2 font-sans">Budget</label>
+              <select class="w-full appearance-none outline-none focus:ring-2 focus:ring-emerald-400/60 focus:border-emerald-300 transition text-sm text-neutral-900 bg-white border-neutral-200 border rounded-xl pt-2.5 pr-3 pb-2.5 pl-3">
+                <option class="bg-white font-sans" value="5-10k">$5k–$10k</option>
+                <option class="bg-white font-sans" value="10-15k">$10k–$15k</option>
+                <option class="bg-white font-sans" value="15k+">$15k+</option>
+              </select>
+            </div>
+            <div class="sm:col-span-1">
+              <label class="block text-xs font-medium text-neutral-700 mb-2 font-sans">Timeline</label>
+              <select class="w-full appearance-none outline-none focus:ring-2 focus:ring-emerald-400/60 focus:border-emerald-300 transition text-sm text-neutral-900 bg-white border-neutral-200 border rounded-xl pt-2.5 pr-3 pb-2.5 pl-3">
+                <option class="bg-white font-sans" value="asap">Immediate</option>
+                <option class="bg-white font-sans" value="this-quarter">This quarter</option>
+              </select>
+            </div>
+            <div class="sm:col-span-1">
+              <label class="block text-xs font-medium text-neutral-700 mb-2 font-sans">Category</label>
+              <select class="w-full appearance-none outline-none focus:ring-2 focus:ring-emerald-400/60 focus:border-emerald-300 transition text-sm text-neutral-900 bg-white border-neutral-200 border rounded-xl pt-2.5 pr-3 pb-2.5 pl-3">
+                <option class="bg-white font-sans">Tech &amp; Software</option>
+                <option class="bg-white font-sans">Lifestyle &amp; Personal</option>
+                <option class="bg-white font-sans">Content &amp; Media</option>
+              </select>
+            </div>
+            <div class="sm:col-span-2">
+              <label class="block text-xs font-medium text-neutral-700 mb-2 font-sans">Campaign details</label>
+              <textarea rows="3" placeholder="What are your goals? Target audience, deliverables..." class="w-full placeholder-neutral-500 outline-none focus:ring-2 focus:ring-emerald-400/60 focus:border-emerald-300 transition text-sm text-neutral-900 bg-white border-neutral-200 border rounded-xl pt-2.5 pr-3 pb-2.5 pl-3"></textarea>
+            </div>
+            <div class="sm:col-span-2 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+              <p class="text-xs text-neutral-600 font-sans">We'll get back to you within 24 hours.</p>
+              <button type="submit" class="inline-flex gap-2 ring-1 ring-emerald-300 hover:bg-emerald-300 transition text-sm font-medium text-white bg-emerald-500 rounded-xl pt-2.5 pr-4 pb-2.5 pl-4 shadow items-center font-sans">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="send" class="lucide lucide-send w-4 h-4" style="stroke-width: 1.5"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" class=""></path><path d="m21.854 2.147-10.94 10.939" class=""></path></svg>
+                Send inquiry
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
-      <div class="f-col">
-        <span class="f-col-title">For brands</span>
-        <ul class="f-list">
-          <li><a href="/start.html">How to start</a></li>
-          <li><a href="/pricing.html">Pricing</a></li>
-          <li><a href="/contact.html">Talk to operations</a></li>
-        </ul>
-      </div>
-      <div class="f-col">
-        <span class="f-col-title">For creators</span>
-        <ul class="f-list">
-          <li><a href="/roster.html">Roster eligibility</a></li>
-          <li><a href="/payouts.html">Payout structure</a></li>
-        </ul>
-      </div>
-      <div class="f-col">
-        <span class="f-col-title">Company &amp; Legal</span>
-        <ul class="f-list">
-          <li><a href="/about.html">About Us</a></li>
-          <li><a href="/escalation.html">The five triggers</a></li>
-          <li><a href="mailto:ops@wellsplusdaily.com">ops@wellsplusdaily.com</a></li>
-          <li><a href="/terms.html">Terms of Service</a></li>
-          <li><a href="/privacy.html">Privacy Policy</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="f-logo">Wells<span>+</span>Daily</div>
-      <div class="f-legal">
-        <span>&copy; 2026 WellsPlusDaily</span>
+
+      <!-- Footer Bottom -->
+      <div class="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-0 border-neutral-200 border-t mt-8 pt-6 justify-between">
+        <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+          <p class="text-neutral-500 text-sm font-sans">© 2026 Wells+Daily. All rights reserved.</p>
+          <div class="flex items-center gap-4 text-neutral-500 text-sm">
+            <span class="font-sans">Dual-Contract Enforcement</span>
+            <span class="hidden sm:inline text-neutral-300 font-sans">•</span>
+            <span class="font-sans">Bounded Guarantee</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
