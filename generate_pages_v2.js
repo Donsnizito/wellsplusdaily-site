@@ -192,7 +192,7 @@ nav{
 }
 `;
 
-const nav = `<div class="w-full flex justify-center"><header class="relative z-10 max-w-5xl w-full pt-4">
+const nav = `<div class="w-full flex justify-center"><header id="global-header" class="fixed top-0 left-0 right-0 z-50 max-w-[100vw] w-full pt-4 transition-all duration-300">
       <nav class="flex max-w-7xl md:px-6 mr-auto ml-auto pt-4 pr-4 pb-4 pl-4 items-center justify-between">
         <a href="/" class="flex items-center gap-3">
           <svg class="md:w-10 md:h-10 w-[30px] h-[30px] text-neutral-900" viewBox="0 0 48 48" aria-hidden="true" stroke-width="2">
@@ -221,15 +221,15 @@ const nav = `<div class="w-full flex justify-center"><header class="relative z-1
 
       <!-- Mobile menu -->
       <div id="mobileMenu" class="mx-auto hidden max-w-7xl px-4 md:hidden">
-        <div class="space-y-1 rounded-xl border border-black/10 bg-white/50 p-3 backdrop-blur">
+        <div class="space-y-1 rounded-xl border border-black/10 bg-white/80 p-3 backdrop-blur shadow-lg">
           <a class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 hover:bg-black/5" href="/how-it-works.html">How it works</a>
           <a class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 hover:bg-black/5" href="/guarantee.html">Guarantee</a>
           <a class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 hover:bg-black/5" href="/tech-software.html">Categories</a>
           <a class="block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 hover:bg-black/5" href="/pricing.html">Pricing</a>
           <div class="my-2 h-px w-full bg-black/10"></div>
-          <div class="flex items-center gap-2">
-            <a href="/roster.html" class="flex-1 rounded-lg border border-black/10 bg-white px-3 py-2 text-center text-sm font-medium text-neutral-700 hover:bg-black/5">Log in</a>
-            <a href="#contact" class="flex-1 rounded-lg bg-[#DDF82A] px-3 py-2 text-center text-sm font-medium text-black hover:bg-[#C5E01A]">Request Access</a>
+          <div class="flex flex-col gap-2">
+            <a href="/roster.html" class="w-full rounded-lg border border-black/10 bg-white px-3 py-2 text-center text-sm font-medium text-neutral-700 hover:bg-black/5">Log in</a>
+            <a href="#contact" class="w-full rounded-lg bg-[#DDF82A] px-3 py-2 text-center text-sm font-medium text-black hover:bg-[#C5E01A]">Request Access</a>
           </div>
         </div>
       </div>
@@ -309,7 +309,32 @@ ${sectionsHtml}
 
 ${footer}
 
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const header = document.getElementById('global-header');
+
+  if(menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      header.classList.add('backdrop-blur-md', 'bg-white/60', 'border-b', 'border-black/5', 'shadow-sm');
+      header.classList.remove('pt-4');
+    } else {
+      header.classList.remove('backdrop-blur-md', 'bg-white/60', 'border-b', 'border-black/5', 'shadow-sm');
+      header.classList.add('pt-4');
+    }
+  });
+});
+</script>
 </body>
+
 </html>`;
 }
 
