@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>WellsPlusDaily — Lifestyle & Personal</title>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<meta name="description" content="WellsPlusDaily provides structured contract execution, secure deal management, and data-driven talent matching for premium brands and creators.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400&display=swap" rel="stylesheet">
@@ -30,7 +29,6 @@ body{
   -webkit-font-smoothing:antialiased;overflow-x:hidden;
 }
 
-/* NAV */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:200;
   padding:0 56px;height:68px;
@@ -60,30 +58,25 @@ nav.scrolled{border-bottom-color:var(--rule)}
 }
 .nav-cta:hover{background:var(--ink);color:var(--w)}
 
-/* HERO */
 .hero{padding:160px 56px 80px}
 .hero-center{max-width:800px;margin:0 auto;text-align:center}
 .eyebrow{
   font-size:11px;font-weight:400;letter-spacing:0.22em;
   text-transform:uppercase;color:var(--ink4);
   display:block;margin-bottom:32px;
-  opacity:0;animation:up 0.7s 0.2s ease forwards;
 }
 .hero-h1{
   font-family:var(--serif);font-size:clamp(56px,7vw,96px);
   font-weight:300;line-height:1.05;letter-spacing:-0.02em;
   color:var(--ink);margin-bottom:32px;
-  opacity:0;animation:up 0.8s 0.35s ease forwards;
 }
 .hero-h1 em{font-style:italic;font-weight:300}
 .hero-sub{
   font-size:17px;font-weight:300;line-height:1.8;
   color:var(--ink2);margin:0 auto 48px;max-width:640px;
-  opacity:0;animation:up 0.7s 0.5s ease forwards;
 }
 .hero-actions{
   display:flex;align-items:center;justify-content:center;gap:24px;
-  opacity:0;animation:up 0.7s 0.65s ease forwards;
 }
 .btn-dark{
   display:inline-block;font-size:12px;font-weight:400;
@@ -93,7 +86,6 @@ nav.scrolled{border-bottom-color:var(--rule)}
 }
 .btn-dark:hover{opacity:0.75}
 
-/* SECTION */
 .section{max-width:1280px;margin:0 auto;padding:128px 56px}
 .s-label{
   font-size:11px;font-weight:400;letter-spacing:0.2em;
@@ -101,7 +93,6 @@ nav.scrolled{border-bottom-color:var(--rule)}
   display:block;margin-bottom:72px;
 }
 
-/* ABOUT / OUTCOME H2 BLOCK */
 .about-grid{
   display:grid;grid-template-columns:5fr 4fr;
   gap:120px;align-items:start;
@@ -138,10 +129,8 @@ nav.scrolled{border-bottom-color:var(--rule)}
   color:var(--ink4);text-align:right;max-width:180px;
 }
 
-/* FULL RULE */
 .full-rule{height:1px;background:var(--rule);width:100%}
 
-/* FOOTER (5-Column Stripe/Ramp Compression) */
 footer{border-top:1px solid var(--rule);padding:80px 56px 40px;background:var(--w)}
 .footer-inner{max-width:1280px;margin:0 auto}
 .footer-top{
@@ -175,13 +164,6 @@ footer{border-top:1px solid var(--rule);padding:80px 56px 40px;background:var(--
 .f-legal a{color:var(--ink4);text-decoration:none;transition:color 0.2s}
 .f-legal a:hover{color:var(--ink3)}
 
-/* ANIMATIONS */
-@keyframes up{
-  from{opacity:0;transform:translateY(20px)}
-  to{opacity:1;transform:translateY(0)}
-}
-
-/* RESPONSIVE */
 @media(max-width:960px){
   nav{padding:0 24px}
   .nav-right .nav-link:not(.nav-cta){display:none}
@@ -209,13 +191,12 @@ footer{border-top:1px solid var(--rule);padding:80px 56px 40px;background:var(--
   </div>
 </nav>
 
-<!-- HERO (Stripe E-commerce Template) -->
+<!-- HERO -->
 <div style="max-width:1280px;margin:0 auto;">
   <div class="hero">
     <div class="hero-center">
-      <span class="eyebrow">For Lifestyle Brands</span>
-      <h1 class="hero-h1">Unify premium products and<br><em>creator distribution.</em></h1>
-      <p class="hero-sub">Create a seamless brand experience across all channels, and grow revenue with a unified campaign enforcement platform.</p>
+      <h1 class="hero-h1">Brand safety for <em>consumer goods.</em></h1>
+      <p class="hero-sub">Accelerate e-commerce growth with creators who align with your brand guidelines, while enforcing strict FTC compliance.</p>
       <div class="hero-actions">
         <a href="/contact.html" class="btn-dark">Request brand portal access</a>
       </div>
@@ -223,47 +204,21 @@ footer{border-top:1px solid var(--rule);padding:80px 56px 40px;background:var(--
   </div>
 </div>
 
-<div class="full-rule"></div>
 
-<!-- SECTION 1 -->
+<div class="full-rule"></div>
 <div class="section">
   <div class="about-grid">
     <div class="about-body">
-      <h2 class="about-h2">A complete operating system for <em>e-commerce scale.</em></h2>
-      <p class="about-sub">Build a unified partnership experience with a complete set of building blocks.</p>
+      <h2 class="about-h2">Physical Goods <em>Integration</em></h2>
+      <p class="about-sub">Manage seeding and product-led campaigns securely.</p>
+      <p><strong>Seeding Contracts:</strong> Escrow agreements that trigger upon confirmed receipt and review of physical goods.</p><p><strong>Brand Guidelines:</strong> Strict enforcement of visual identity and tonal requirements before content goes live.</p>
     </div>
     <div class="services">
-      <div class="srv">
-        <span class="srv-name">Maximize engagement rates</span>
-        <span class="srv-tag">High-converting creators</span>
-      </div>
-      <div class="srv">
-        <span class="srv-name">Expand audience</span>
-        <span class="srv-tag">New demographics</span>
-      </div>
-      <div class="srv">
-        <span class="srv-name">Unify distribution</span>
-        <span class="srv-tag">Cross-platform synchronization</span>
-      </div>
-      <div class="srv">
-        <span class="srv-name">Prevent compliance drift</span>
-        <span class="srv-tag">Strict deliverable enforcement</span>
-      </div>
+            <div class="srv">        <span class="srv-name">Seeding Logistics</span>        <span class="srv-tag">Tracked within contracts</span>      </div>      <div class="srv">        <span class="srv-name">Visual Enforcement</span>        <span class="srv-tag">Pre-approval workflows</span>      </div>      <div class="srv">        <span class="srv-name">FTC Compliance</span>        <span class="srv-tag">Mandatory disclosures</span>      </div>
     </div>
   </div>
 </div>
 
-<div class="full-rule"></div>
-
-<!-- CLOSER HERO -->
-<div class="section" style="text-align:center;">
-  <h2 class="about-h2">Start scaling your brand</h2>
-  <div style="margin-top:40px; display:flex; gap:24px; justify-content:center;">
-    <a href="/contact.html" class="btn-dark">Request brand portal access</a>
-  </div>
-</div>
-
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
@@ -325,9 +280,9 @@ footer{border-top:1px solid var(--rule);padding:80px 56px 40px;background:var(--
 </footer>
 
 <script>
-const nav = document.getElementById('nav');
+const navEl = document.getElementById('nav');
 window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 20);
+  if(navEl) navEl.classList.toggle('scrolled', window.scrollY > 20);
 }, { passive: true });
 </script>
 
