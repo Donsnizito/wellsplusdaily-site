@@ -3,24 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WellsPlusDaily — Process</title>
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<meta name="description" content="WellsPlusDaily provides structured contract execution, secure deal management, and data-driven talent matching for premium brands and creators.">
+<title>WellsPlusDaily — The Trust Stack</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --w:#FDFCFA;
-  --ink:#141210;
-  --ink2:#3A3835;
-  --ink3:#787571;
-  --ink4:#B4B1AC;
-  --ink-faint:rgba(20,18,16,0.3);
-  --ink-light:rgba(20,18,16,0.5);
-  --rule:#E4E0DA;
-  --cream:#F5F3EE;
+  --w:#FDFCFA;--ink:#141210;--ink2:#3A3835;--ink3:#787571;--ink4:#B4B1AC;
+  --rule:#E4E0DA;--cream:#F5F3EE;
   --serif:'Cormorant Garamond',Georgia,serif;
   --sans:'DM Sans',system-ui,sans-serif;
 }
@@ -29,169 +19,67 @@ body{
   font-family:var(--sans);background:var(--w);color:var(--ink);
   -webkit-font-smoothing:antialiased;overflow-x:hidden;
 }
-
-/* NAV */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:200;
-  padding:0 56px;height:68px;
-  display:flex;align-items:center;justify-content:space-between;
-  background:rgba(253,252,250,0.88);
-  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  padding:0 56px;height:68px;display:flex;align-items:center;justify-content:space-between;
+  background:rgba(253,252,250,0.88);backdrop-filter:blur(16px);
   border-bottom:1px solid transparent;transition:border-color 0.3s;
 }
 nav.scrolled{border-bottom-color:var(--rule)}
-.logo{
-  font-family:var(--serif);font-size:20px;font-weight:400;
-  letter-spacing:0.02em;color:var(--ink);text-decoration:none;
-}
+.logo{font-family:var(--serif);font-size:20px;color:var(--ink);text-decoration:none;}
 .logo-plus{font-weight:300;font-style:italic;margin:0 1px}
 .nav-right{display:flex;align-items:center;gap:40px}
-.nav-link{
-  font-size:12px;font-weight:400;letter-spacing:0.12em;
-  text-transform:uppercase;color:var(--ink3);text-decoration:none;
-  transition:color 0.2s;
-}
+.nav-link{font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink3);text-decoration:none;}
 .nav-link:hover{color:var(--ink)}
 .nav-cta{
-  font-size:12px;font-weight:400;letter-spacing:0.12em;
-  text-transform:uppercase;color:var(--ink);text-decoration:none;
-  border:1px solid var(--ink);padding:10px 24px;
-  transition:background 0.2s,color 0.2s;
+  font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink);
+  border:1px solid var(--ink);padding:10px 24px;text-decoration:none;
 }
 .nav-cta:hover{background:var(--ink);color:var(--w)}
 
-/* HERO */
-.hero{padding:160px 56px 80px}
-.hero-center{max-width:800px;margin:0 auto;text-align:center}
-.eyebrow{
-  font-size:11px;font-weight:400;letter-spacing:0.22em;
-  text-transform:uppercase;color:var(--ink4);
-  display:block;margin-bottom:32px;
-  opacity:0;animation:up 0.7s 0.2s ease forwards;
-}
-.hero-h1{
-  font-family:var(--serif);font-size:clamp(56px,7vw,96px);
-  font-weight:300;line-height:1.05;letter-spacing:-0.02em;
-  color:var(--ink);margin-bottom:32px;
-  opacity:0;animation:up 0.8s 0.35s ease forwards;
-}
-.hero-h1 em{font-style:italic;font-weight:300}
-.hero-sub{
-  font-size:17px;font-weight:300;line-height:1.8;
-  color:var(--ink2);margin:0 auto 48px;max-width:640px;
-  opacity:0;animation:up 0.7s 0.5s ease forwards;
-}
-.hero-actions{
-  display:flex;align-items:center;justify-content:center;gap:24px;
-  opacity:0;animation:up 0.7s 0.65s ease forwards;
-}
-.btn-dark{
-  display:inline-block;font-size:12px;font-weight:400;
-  letter-spacing:0.12em;text-transform:uppercase;
-  color:var(--w);background:var(--ink);
-  padding:16px 36px;text-decoration:none;transition:opacity 0.2s;
-}
-.btn-dark:hover{opacity:0.75}
+.hero{padding:180px 56px 100px; max-width:1000px; margin:0 auto; text-align:center;}
+.hero-h1{font-family:var(--serif);font-size:clamp(48px,6vw,80px);font-weight:300;line-height:1.05;letter-spacing:-0.02em;margin-bottom:24px;}
+.hero-h1 em{font-style:italic;}
+.hero-sub{font-size:19px;font-weight:300;line-height:1.6;color:var(--ink2);margin:0 auto 48px;max-width:720px;}
+.btn-dark{display:inline-block;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--w);background:var(--ink);padding:16px 36px;text-decoration:none;}
+.stats-bar{display:flex;justify-content:center;gap:64px;margin-top:80px;border-top:1px solid var(--rule);padding-top:48px;}
+.stat-item{text-align:left;}
+.stat-num{font-family:var(--serif);font-size:36px;color:var(--ink);display:block;}
+.stat-label{font-size:12px;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink3);margin-top:8px;display:block;}
 
-/* SECTION */
-.section{max-width:1280px;margin:0 auto;padding:128px 56px}
-.s-label{
-  font-size:11px;font-weight:400;letter-spacing:0.2em;
-  text-transform:uppercase;color:var(--ink4);
-  display:block;margin-bottom:72px;
-}
+.section{max-width:1280px;margin:0 auto;padding:96px 56px;border-top:1px solid var(--rule);}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:64px;}
+.sec-h2{font-family:var(--serif);font-size:40px;font-weight:300;line-height:1.1;margin-bottom:24px;}
+.sec-sub{font-size:17px;font-weight:300;line-height:1.7;color:var(--ink2);margin-bottom:32px;}
+.feature-card{background:var(--cream);padding:40px;border-radius:2px;}
+.feature-title{font-family:var(--serif);font-size:24px;margin-bottom:16px;}
+.feature-text{font-size:15px;line-height:1.7;color:var(--ink2);}
 
-/* ABOUT / OUTCOME H2 BLOCK */
-.about-grid{
-  display:grid;grid-template-columns:5fr 4fr;
-  gap:120px;align-items:start;
-}
-.about-h2{
-  font-family:var(--serif);
-  font-size:clamp(32px,3.5vw,50px);
-  font-weight:300;line-height:1.12;
-  color:var(--ink);margin-bottom:20px;
-}
-.about-h2 em{font-style:italic}
-.about-sub{
-  font-size:17px;font-weight:300;line-height:1.8;
-  color:var(--ink2);margin-bottom:40px;
-}
-.about-body p{
-  font-size:15px;font-weight:300;line-height:1.9;
-  color:var(--ink2);margin-bottom:20px;
-}
-.services{padding-top:4px}
-.srv{
-  display:flex;justify-content:space-between;
-  align-items:baseline;
-  padding:22px 0;
-  border-bottom:1px solid var(--rule);
-}
-.srv:first-child{border-top:1px solid var(--rule)}
-.srv-name{
-  font-family:var(--serif);font-size:21px;
-  font-weight:400;color:var(--ink);
-}
-.srv-tag{
-  font-size:11px;font-weight:300;letter-spacing:0.08em;
-  color:var(--ink4);text-align:right;max-width:180px;
-}
+.list-item{padding:24px 0;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;}
+.list-item:first-of-type{border-top:1px solid var(--rule);}
+.list-title{font-family:var(--serif);font-size:20px;}
+.list-tag{font-size:12px;color:var(--ink3);text-transform:uppercase;letter-spacing:0.1em;}
 
-/* FULL RULE */
-.full-rule{height:1px;background:var(--rule);width:100%}
-
-/* FOOTER (5-Column Stripe/Ramp Compression) */
 footer{border-top:1px solid var(--rule);padding:80px 56px 40px;background:var(--w)}
 .footer-inner{max-width:1280px;margin:0 auto}
-.footer-top{
-  display:flex;gap:24px;margin-bottom:64px;
-  font-size:12px;font-weight:400;color:var(--ink);
-}
-.footer-top a{color:var(--ink);text-decoration:none;transition:opacity 0.2s}
-.footer-top a:hover{opacity:0.6}
-.footer-grid{
-  display:grid;grid-template-columns:repeat(5,1fr);
-  gap:40px;margin-bottom:80px;
-}
-.f-col-title{
-  font-family:var(--serif);font-size:16px;font-weight:400;
-  color:var(--ink);margin-bottom:24px;display:block;
-}
+.footer-top{display:flex;gap:24px;margin-bottom:64px;}
+.footer-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:40px;margin-bottom:80px;}
+.f-col-title{font-family:var(--serif);font-size:16px;margin-bottom:24px;display:block;}
 .f-list{list-style:none}
 .f-list li{margin-bottom:16px}
-.f-list a, .f-list span{
-  font-size:13px;font-weight:300;color:var(--ink2);
-  text-decoration:none;transition:color 0.2s;
-}
-.f-list a:hover{color:var(--ink)}
-.footer-bottom{
-  display:flex;justify-content:space-between;align-items:center;
-  padding-top:32px;border-top:1px solid var(--rule);
-}
-.f-logo{font-family:var(--serif);font-size:16px;font-weight:400;color:var(--ink)}
-.f-logo span{font-weight:300;font-style:italic}
-.f-legal{display:flex;gap:24px;font-size:12px;font-weight:300;color:var(--ink4)}
-.f-legal a{color:var(--ink4);text-decoration:none;transition:color 0.2s}
-.f-legal a:hover{color:var(--ink3)}
+.f-list a{font-size:13px;color:var(--ink2);text-decoration:none;}
+.footer-bottom{display:flex;justify-content:space-between;padding-top:32px;border-top:1px solid var(--rule);}
+.f-logo{font-family:var(--serif);font-size:16px;}
+.f-legal{display:flex;gap:24px;font-size:12px;color:var(--ink4)}
 
-/* ANIMATIONS */
-@keyframes up{
-  from{opacity:0;transform:translateY(20px)}
-  to{opacity:1;transform:translateY(0)}
-}
-
-/* RESPONSIVE */
 @media(max-width:960px){
   nav{padding:0 24px}
-  .nav-right .nav-link:not(.nav-cta){display:none}
-  .hero{padding:120px 24px 64px}
-  .hero-h1{font-size:clamp(44px,10vw,80px)}
-  .section{padding:96px 24px}
-  .about-grid{grid-template-columns:1fr;gap:56px}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:40px}
-  .footer-top{flex-wrap:wrap}
-  .footer-bottom{flex-direction:column;gap:16px;align-items:flex-start}
+  .hero{padding:140px 24px 80px}
+  .grid-2, .grid-3{grid-template-columns:1fr;gap:40px;}
+  .stats-bar{flex-direction:column;gap:32px;align-items:center;text-align:center;}
+  .stat-item{text-align:center;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
 }
 @media(max-width:600px){
   .footer-grid{grid-template-columns:1fr}
@@ -199,7 +87,6 @@ footer{border-top:1px solid var(--rule);padding:80px 56px 40px;background:var(--
 </style>
 </head>
 <body>
-
 <nav id="nav">
   <a href="/" class="logo">Wells<span class="logo-plus">+</span>Daily</a>
   <div class="nav-right">
@@ -209,146 +96,76 @@ footer{border-top:1px solid var(--rule);padding:80px 56px 40px;background:var(--
   </div>
 </nav>
 
-<!-- HERO -->
-<div style="max-width:1280px;margin:0 auto;">
-  <div class="hero">
-    <div class="hero-center">
-      <h1 class="hero-h1">Trust is risk.<br><em>Mitigate both.</em></h1>
-      <p class="hero-sub">Wells+ Daily is an all-in-one execution platform that combines roster curation, contract negotiation, compliance enforcement, and payout automation into a single system.</p>
-      <div class="hero-actions">
-        <a href="/contact.html" class="btn-dark">Request brand portal access</a>
-      </div>
+<div class="hero">
+  <h1 class="hero-h1">Execution is scarce. <em>We enforce it.</em></h1>
+  <p class="hero-sub">The dual-contract enforcement system built for premium brands. We monetize the function of being a credible enforcement layer at a price point where neither side can credibly enforce on the other.</p>
+  <a href="/contact.html" class="btn-dark">Explore the Trust Stack</a>
+  
+  <div class="stats-bar">
+    
+    <div class="stat-item">
+      <span class="stat-num">$5-15K</span>
+      <span class="stat-label">Deal Boundaries</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">15%</span>
+      <span class="stat-label">Flat Fee</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">90-Day</span>
+      <span class="stat-label">Execution Window</span>
     </div>
   </div>
 </div>
 
-<div class="full-rule"></div>
 
-<!-- OVERVIEW SECTION -->
 <div class="section">
-  <div class="about-grid">
-    <div class="about-body">
-      <h2 class="about-h2">One enforcement layer for your <em>entire campaign.</em></h2>
-      <p class="about-sub">Selection, contracts, compliance monitoring, and protected payments – under a bounded guarantee.</p>
-      <p>Trusted by premium brands to execute high-stakes creator campaigns securely.</p>
-      <p>Key outcomes: Our brands execute campaigns 3x faster, reduce compliance drift by 75%, and manage the full intake-to-payout cycle with zero internal overhead.</p>
+  <h2 class="sec-h2">One trust stack for your entire creator spend.</h2>
+  <p class="sec-sub">Infinite reach is meaningless without reliability. We replace speculation with actuarial evidence and bounded guarantees.</p>
+  <div class="grid-3">
+    
+    <div class="feature-card">
+      <h3 class="feature-title">Curation as Underwriting</h3>
+      <p class="feature-text">External proof does dual work. We only present creators whose delivery history makes our bounded guarantee economically survivable.</p>
     </div>
-    <div class="services">
-      <div class="srv">
-        <span class="srv-name">Curation</span>
-        <span class="srv-tag">Verified historical performance</span>
-      </div>
-      <div class="srv">
-        <span class="srv-name">Contracts</span>
-        <span class="srv-tag">Dynamic legal enforcement</span>
-      </div>
-      <div class="srv">
-        <span class="srv-name">Compliance</span>
-        <span class="srv-tag">Strict deliverable checks</span>
-      </div>
-      <div class="srv">
-        <span class="srv-name">Payouts</span>
-        <span class="srv-tag">Milestone-based escrow</span>
-      </div>
+    <div class="feature-card">
+      <h3 class="feature-title">Institutional Visibility</h3>
+      <p class="feature-text">AI support always-on for routine queries, backed by a defined human escalation window (Mon–Fri 7:30am–8pm EDT).</p>
+    </div>
+    <div class="feature-card">
+      <h3 class="feature-title">Bounded Guarantee</h3>
+      <p class="feature-text">Credit-and-replacement remediation, scoped to spec compliance and timeline, within a strict 90-day window.</p>
     </div>
   </div>
 </div>
-
-<div class="full-rule"></div>
-
-<!-- CORE CAPABILITIES 1 -->
 <div class="section">
-  <div class="about-grid">
-    <div class="about-body">
-      <h2 class="about-h2">Brand Partnerships &amp; <em>Roster Management</em></h2>
-      <p class="about-sub">We issue secure contracts instantly, blocking out-of-policy execution before it happens.</p>
-      <p><strong>Brand Partnerships:</strong> Unlimited curated access with no speculative risk. Preset controls by brand, category, and budget block unapproved creators before a deal is structured.</p>
-      <p><strong>Roster Management:</strong> Auto-verification of creator performance at the moment of intake. We review 100% of historical metrics automatically, flagging exceptions only.</p>
+  <div class="grid-2">
+    <div>
+      <h2 class="sec-h2">Process Ownership Visibility.</h2>
+      <p class="sec-sub">The continuous visible artifact of the enforcement function operating.</p>
     </div>
-    <div class="services">
-      <div class="srv">
-        <span class="srv-name">No Speculative Risk</span>
-        <span class="srv-tag">Corporate liability only</span>
+    <div>
+      
+      <div class="list-item">
+        <span class="list-title">Creator Selected</span>
+        <span class="list-tag">Curated Match</span>
       </div>
-      <div class="srv">
-        <span class="srv-name">Instant Verification</span>
-        <span class="srv-tag">1-2 business days review</span>
+      <div class="list-item">
+        <span class="list-title">Contract Executed</span>
+        <span class="list-tag">Dual-Bound</span>
       </div>
-      <div class="srv">
-        <span class="srv-name">Preset Controls</span>
-        <span class="srv-tag">Category-specific limits</span>
+      <div class="list-item">
+        <span class="list-title">Compliance Monitored</span>
+        <span class="list-tag">Active Spec</span>
       </div>
-    </div>
-  </div>
-</div>
-
-<div class="full-rule"></div>
-
-<!-- CORE CAPABILITIES 2 -->
-<div class="section">
-  <div class="about-grid">
-    <div class="about-body">
-      <h2 class="about-h2">Contract Execution &amp; <em>Compliance Automation</em></h2>
-      <p class="about-sub">AI-powered intake parses briefs to auto-populate contract terms.</p>
-      <p><strong>Contract Execution:</strong> Dynamic approval routing with parallel workflows across creative, legal, and compliance. Two-way and three-way matching against briefs and deliverables.</p>
-      <p><strong>Compliance Automation:</strong> Autonomous deliverable review and policy enforcement across all content. We never authorize payout without objective sign-off.</p>
-    </div>
-    <div class="services">
-      <div class="srv">
-        <span class="srv-name">99% Accuracy</span>
-        <span class="srv-tag">Objective deliverable review</span>
-      </div>
-      <div class="srv">
-        <span class="srv-name">Parallel Routing</span>
-        <span class="srv-tag">Weeks to days</span>
-      </div>
-      <div class="srv">
-        <span class="srv-name">Three-way Matching</span>
-        <span class="srv-tag">Brief, draft, final</span>
+      <div class="list-item">
+        <span class="list-title">Escalation Available</span>
+        <span class="list-tag">SLA Protected</span>
       </div>
     </div>
   </div>
 </div>
 
-<div class="full-rule"></div>
-
-<!-- CORE CAPABILITIES 3 -->
-<div class="section">
-  <div class="about-grid">
-    <div class="about-body">
-      <h2 class="about-h2">Escrow &amp; <em>Payouts</em></h2>
-      <p class="about-sub">Release funds to your creators seamlessly and securely.</p>
-      <p><strong>Payouts:</strong> Automatic payment blocking on discrepancies. Payment methods include ACH, Same-Day ACH, and domestic wire. Zero processing fees on domestic execution.</p>
-      <p><strong>Reporting:</strong> Real-time bidirectional sync with your campaign metrics. All decisions are transparent and auditable.</p>
-    </div>
-    <div class="services">
-      <div class="srv">
-        <span class="srv-name">Blocked Discrepancies</span>
-        <span class="srv-tag">Payment on approval</span>
-      </div>
-      <div class="srv">
-        <span class="srv-name">Zero Domestic Fees</span>
-        <span class="srv-tag">ACH &amp; Checks</span>
-      </div>
-      <div class="srv">
-        <span class="srv-name">Transparent Audits</span>
-        <span class="srv-tag">Line-item accuracy</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="full-rule"></div>
-
-<!-- CLOSER -->
-<div class="section" style="text-align:center;">
-  <h2 class="about-h2">Start scaling your execution</h2>
-  <div style="margin-top:40px; display:flex; gap:24px; justify-content:center;">
-    <a href="/contact.html" class="btn-dark">Request brand portal access</a>
-  </div>
-</div>
-
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
@@ -410,11 +227,10 @@ footer{border-top:1px solid var(--rule);padding:80px 56px 40px;background:var(--
 </footer>
 
 <script>
-const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 20);
-}, { passive: true });
+  const n = document.getElementById('nav');
+  if(n) n.classList.toggle('scrolled', window.scrollY > 20);
+});
 </script>
-
 </body>
 </html>
