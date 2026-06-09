@@ -96,58 +96,28 @@ nav{
 }
 </style>
 
+  
+  <!-- Ethyca Fides Consent Manager Placeholder -->
   <script>
-    window.klaroConfig = {
-        version: 1,
-        elementID: 'klaro',
-        styling: {
-            theme: ['light', 'bottom', 'wide']
-        },
-        noAutoLoad: false,
-        htmlTexts: true,
-        embedded: false,
-        groupByPurpose: true,
-        storageMethod: 'cookie',
-        cookieName: 'klaro',
-        cookieExpiresAfterDays: 365,
-        default: false,
-        mustConsent: false,
-        acceptAll: true,
-        hideDeclineAll: false,
-        hideLearnMore: false,
-        noticeAsModal: false,
-        translations: {
-            en: {
-                consentModal: {
-                    title: 'Privacy Preferences',
-                    description: 'We use cookies and similar technologies to help personalize content, tailor and measure ads, and provide a better experience. By clicking accept, you agree to this, as outlined in our Cookie Policy.',
-                },
-                consentNotice: {
-                    description: 'We use cookies and similar technologies to help personalize content, tailor and measure ads, and provide a better experience. By clicking accept, you agree to this, as outlined in our Cookie Policy.'
-                },
-                purposes: {
-                    analytics: 'Analytics',
-                    marketing: 'Marketing'
-                }
-            }
-        },
-        services: [
-            {
-                name: 'analytics',
-                title: 'Analytics',
-                purposes: ['analytics'],
-                required: false,
-            },
-            {
-                name: 'marketing',
-                title: 'Marketing',
-                purposes: ['marketing'],
-                required: false,
-            }
+    window.Fides = window.Fides || {};
+    window.Fides.config = {
+      consent: {
+        options: [
+          { cookieKeys: ['essential'], default: true, fidesDataUseKey: 'essential' },
+          { cookieKeys: ['marketing'], default: false, fidesDataUseKey: 'marketing' }
         ]
+      },
+      experience: {
+        component: "banner_and_modal"
+      },
+      options: {
+        isOverlayEnabled: true,
+        isPrefetchEnabled: false
+      }
     };
   </script>
-  <script defer type="application/javascript" src="https://cdn.kiprotect.com/klaro/v0.7.18/klaro.js"></script>
+  <script src="https://privacy.ethyca.com/b2b/js/fides.js" async defer></script>
+
 </head>
 <body>
 
