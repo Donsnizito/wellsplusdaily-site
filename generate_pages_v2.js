@@ -174,7 +174,7 @@ body{
 nav{
   /* Overridden by Tailwind nav */
 }
-.hero{padding:160px 40px 64px; max-width:1000px; margin:0 auto; text-align:center;}
+.hero{padding:220px 40px 64px; max-width:1000px; margin:0 auto; text-align:center;}
 .hero-h1{font-family:var(--sans);font-size:var(--text-30);font-weight:500;line-height:1.05;letter-spacing:-0.03em;margin-bottom:16px; color:var(--ink);}
 .hero-h1 em{font-style:normal; color:var(--ink3);}
 .hero-sub{font-size:var(--text-18);font-weight:400;line-height:1.6;color:var(--ink2);margin:0 auto 32px;max-width:720px; letter-spacing:-0.01em;}
@@ -205,7 +205,7 @@ nav{
   .stat-num{font-size:var(--text-48);}
 }
 @media(max-width:960px){
-  .hero{padding:140px 24px 48px}
+  .hero{padding:180px 24px 48px}
   .grid-2, .grid-3{grid-template-columns:1fr;gap:32px;}
   .stats-bar{flex-direction:column;gap:24px;align-items:center;text-align:center;}
   .stat-item{text-align:center;}
@@ -214,10 +214,10 @@ nav{
 }
 `;
 
-const nav = `<div class="w-full flex justify-start"><header id="global-header" class="fixed top-0 left-0 right-0 z-50 max-w-[100vw] w-full transition-all duration-300">
+const nav = `<div class="w-full flex justify-center"><header id="global-header" class="fixed top-0 left-0 right-0 z-50 max-w-[100vw] w-full transition-all duration-300">
 
-      <div id="top-banner" class="w-full bg-[#0A0A0A] text-white px-4 py-4 flex items-center justify-start relative transition-all duration-300">
-        <p class="text-[length:var(--text-13)] font-medium text-neutral-300 text-left pr-8 sm:pr-0 w-full">
+      <div id="top-banner" class="w-full bg-[#0A0A0A] text-white px-4 py-4 flex items-center justify-start md:justify-center relative transition-all duration-300">
+        <p class="text-[length:var(--text-13)] font-medium text-neutral-300 text-left md:text-center pr-8 md:pr-0 w-full">
           Introducing Wells+ Daily — the intelligent operating system for premium brands and creators. 
           <a href="/how-it-works.html" class="text-white underline underline-offset-2 hover:text-[#DDF82A] transition-colors ml-1">Learn more <span aria-hidden="true">&rarr;</span></a>
         </p>
@@ -235,7 +235,7 @@ const nav = `<div class="w-full flex justify-start"><header id="global-header" c
           <span class="text-xl font-medium tracking-tight text-neutral-900">Wells+Daily</span>
         </a>
 
-        <button id="menuBtn" class="inline-flex h-9 w-9 items-center justify-start rounded-lg border border-black/10 bg-black/5 md:hidden">
+        <button id="menuBtn" class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-black/10 bg-black/5 md:hidden">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-neutral-900"><path d="M4 12h16"></path><path d="M4 18h16"></path><path d="M4 6h16"></path></svg>
           <span class="sr-only">Open menu</span>
         </button>
@@ -247,7 +247,7 @@ const nav = `<div class="w-full flex justify-start"><header id="global-header" c
           <a href="/pricing.html" class="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition">Pricing</a>
           <div class="hidden h-6 w-px bg-black/10 md:block"></div>
           <a href="/roster.html" class="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition">Log in</a>
-          <a href="#contact" class="group relative inline-flex cursor-pointer transition-all duration-[1000ms] ease-[cubic-bezier(0.15,0.83,0.66,1)] hover:-translate-y-[3px] hover:scale-[1.1] hover:text-black text-xs font-semibold text-black/80 tracking-tight rounded-full pt-[8px] pr-[16px] pb-[8px] pl-[16px] items-center justify-start bg-[#DDF82A]">
+          <a href="#contact" class="group relative inline-flex cursor-pointer transition-all duration-[1000ms] ease-[cubic-bezier(0.15,0.83,0.66,1)] hover:-translate-y-[3px] hover:scale-[1.1] hover:text-black text-xs font-semibold text-black/80 tracking-tight rounded-full pt-[8px] pr-[16px] pb-[8px] pl-[16px] items-center justify-center bg-[#DDF82A]">
             <span class="relative z-10 text-sm font-medium rounded-full">Request Access</span>
           </a>
         </div>
