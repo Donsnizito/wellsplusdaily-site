@@ -533,78 +533,82 @@ nav{
   </div>
 
   <!-- Animated Cards Section -->
-  <div class="relative rounded-[2rem] overflow-hidden border border-black/5 bg-[#F8F8F7] w-full mt-8 group/cards-section shadow-sm">
-    <!-- Canvas Animation Background -->
-    <canvas id="cards-canvas" class="absolute inset-0 z-0 w-full h-full opacity-60 transition-opacity duration-700 group-hover/cards-section:opacity-100"></canvas>
+  <div class="relative w-full mt-8 group/cards-section">
+    <!-- Canvas Animation Background (behind all cards) -->
+    <div class="absolute inset-0 z-0 rounded-[2rem] overflow-hidden border border-black/5 bg-[#F8F8F7] shadow-sm">
+        <canvas id="cards-canvas" class="absolute inset-0 w-full h-full opacity-60 transition-opacity duration-700 group-hover/cards-section:opacity-100"></canvas>
+    </div>
     
-    <div class="relative z-10 grid grid-cols-1 md:grid-cols-5 gap-px bg-black/5">
-       <!-- Card 1 -->
-       <a href="/brands.html" class="relative overflow-hidden bg-white/80 backdrop-blur-md flex flex-col items-start p-6 lg:p-8 cursor-pointer hover:bg-white/95 transition-all duration-300 h-full group">
-          <div class="flex items-start justify-between w-full mb-6">
-            <h3 class="text-lg font-semibold text-neutral-900 tracking-tight leading-snug">Brand Partnerships</h3>
-            <div class="flex size-8 shrink-0 items-center justify-center rounded-full bg-white border border-black/10 group-hover:bg-[#DDF82A] group-hover:border-[#DDF82A] transition-colors">
+    <!-- Cards Container (Horizontal Scroll on Mobile, 2-Top / 3-Bottom Grid on Desktop) -->
+    <div class="relative z-10 flex overflow-x-auto md:grid md:grid-cols-6 gap-4 md:gap-6 p-4 md:p-8 snap-x snap-mandatory pb-8 md:pb-8" style="scrollbar-width: none;">
+       
+       <!-- Card 1 (Top Left, half width) -->
+       <a href="/brands.html" class="snap-center shrink-0 w-[85vw] md:w-auto md:col-span-3 relative overflow-hidden bg-white/90 backdrop-blur-md flex flex-col items-start p-6 lg:p-8 cursor-pointer hover:bg-white border border-black/10 rounded-2xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300 min-h-[280px] group">
+          <div class="flex items-start justify-between w-full mb-4">
+            <h3 class="text-xl font-medium text-neutral-900 tracking-tight leading-snug">Brand Partnerships</h3>
+            <div class="flex size-8 shrink-0 items-center justify-center rounded-md bg-white border border-black/10 group-hover:bg-[#DDF82A] group-hover:border-[#DDF82A] transition-colors">
               <svg class="w-4 h-4 text-neutral-900" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </div>
           </div>
-          <div class="mt-auto pt-8">
-              <p class="text-sm font-medium text-neutral-900 mb-2">Matching, outreach &amp; deal structure</p>
-              <p class="text-[13px] text-neutral-500 leading-relaxed">We evaluate your brand category, target audience, and campaign objectives. Our team conducts direct outreach to highly-vetted creators to secure the perfect match. Every engagement is structured individually to guarantee alignment and performance.</p>
+          <div class="flex flex-col mt-auto">
+            <p class="text-[15px] font-medium text-neutral-900 mb-2">Matching, outreach &amp; deal structure</p>
+            <p class="text-[14px] text-neutral-500 leading-relaxed">We evaluate your brand category, target audience, and campaign objectives. Our team conducts direct outreach to highly-vetted creators to secure the perfect match. Every engagement is structured individually to guarantee alignment and performance.</p>
           </div>
        </a>
 
-       <!-- Card 2 -->
-       <a href="#" class="relative overflow-hidden bg-white/80 backdrop-blur-md flex flex-col items-start p-6 lg:p-8 cursor-pointer hover:bg-white/95 transition-all duration-300 h-full group">
-          <div class="flex items-start justify-between w-full mb-6">
-            <h3 class="text-lg font-semibold text-neutral-900 tracking-tight leading-snug">Creator Campaigns</h3>
-            <div class="flex size-8 shrink-0 items-center justify-center rounded-full bg-white border border-black/10 group-hover:bg-[#DDF82A] group-hover:border-[#DDF82A] transition-colors">
+       <!-- Card 2 (Top Right, half width) -->
+       <a href="#" class="snap-center shrink-0 w-[85vw] md:w-auto md:col-span-3 relative overflow-hidden bg-white/90 backdrop-blur-md flex flex-col items-start p-6 lg:p-8 cursor-pointer hover:bg-white border border-black/10 rounded-2xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300 min-h-[280px] group">
+          <div class="flex items-start justify-between w-full mb-4">
+            <h3 class="text-xl font-medium text-neutral-900 tracking-tight leading-snug">Creator Campaigns</h3>
+            <div class="flex size-8 shrink-0 items-center justify-center rounded-md bg-white border border-black/10 group-hover:bg-[#DDF82A] group-hover:border-[#DDF82A] transition-colors">
               <svg class="w-4 h-4 text-neutral-900" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </div>
           </div>
-          <div class="mt-auto pt-8">
-              <p class="text-sm font-medium text-neutral-900 mb-2">Roster curation &amp; rate negotiation</p>
-              <p class="text-[13px] text-neutral-500 leading-relaxed">We represent a curated roster of creators who meet strict audience and content standards. Our dedicated managers handle all rate negotiations to secure fair, market-adjusted pricing. We ensure both sides arrive at the table informed and ready to execute.</p>
+          <div class="flex flex-col mt-auto">
+            <p class="text-[15px] font-medium text-neutral-900 mb-2">Roster curation &amp; rate negotiation</p>
+            <p class="text-[14px] text-neutral-500 leading-relaxed">We represent a curated roster of creators who meet strict audience and content standards. Our dedicated managers handle all rate negotiations to secure fair, market-adjusted pricing. We ensure both sides arrive at the table informed and ready to execute.</p>
           </div>
        </a>
 
-       <!-- Card 3 -->
-       <a href="/guarantee.html" class="relative overflow-hidden bg-white/80 backdrop-blur-md flex flex-col items-start p-6 lg:p-8 cursor-pointer hover:bg-white/95 transition-all duration-300 h-full group">
-          <div class="flex items-start justify-between w-full mb-6">
-            <h3 class="text-lg font-semibold text-neutral-900 tracking-tight leading-snug">Contract Execution</h3>
-            <div class="flex size-8 shrink-0 items-center justify-center rounded-full bg-white border border-black/10 group-hover:bg-[#DDF82A] group-hover:border-[#DDF82A] transition-colors">
+       <!-- Card 3 (Bottom Left, 1/3 width) -->
+       <a href="/guarantee.html" class="snap-center shrink-0 w-[85vw] md:w-auto md:col-span-2 relative overflow-hidden bg-white/90 backdrop-blur-md flex flex-col items-start p-6 lg:p-8 cursor-pointer hover:bg-white border border-black/10 rounded-2xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300 min-h-[280px] group">
+          <div class="flex items-start justify-between w-full mb-4">
+            <h3 class="text-xl font-medium text-neutral-900 tracking-tight leading-snug">Contract Execution</h3>
+            <div class="flex size-8 shrink-0 items-center justify-center rounded-md bg-white border border-black/10 group-hover:bg-[#DDF82A] group-hover:border-[#DDF82A] transition-colors">
               <svg class="w-4 h-4 text-neutral-900" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </div>
           </div>
-          <div class="mt-auto pt-8">
-              <p class="text-sm font-medium text-neutral-900 mb-2">Digital signing &amp; documented terms</p>
-              <p class="text-[13px] text-neutral-500 leading-relaxed">Ambiguity is the enemy of execution. We issue comprehensive digital contracts to lock in the Technical Brief before any work begins. Every deliverable, timeline, and compliance requirement is legally bound.</p>
+          <div class="flex flex-col mt-auto">
+            <p class="text-[15px] font-medium text-neutral-900 mb-2">Digital signing &amp; documented terms</p>
+            <p class="text-[14px] text-neutral-500 leading-relaxed">Ambiguity is the enemy of execution. We issue comprehensive digital contracts to lock in the Technical Brief before any work begins. Every deliverable, timeline, and compliance requirement is legally bound.</p>
           </div>
        </a>
 
-       <!-- Card 4 -->
-       <a href="/how-it-works.html" class="relative overflow-hidden bg-white/80 backdrop-blur-md flex flex-col items-start p-6 lg:p-8 cursor-pointer hover:bg-white/95 transition-all duration-300 h-full group">
-          <div class="flex items-start justify-between w-full mb-6">
-            <h3 class="text-lg font-semibold text-neutral-900 tracking-tight leading-snug">Financial Operations</h3>
-            <div class="flex size-8 shrink-0 items-center justify-center rounded-full bg-white border border-black/10 group-hover:bg-[#DDF82A] group-hover:border-[#DDF82A] transition-colors">
+       <!-- Card 4 (Bottom Center, 1/3 width) -->
+       <a href="/how-it-works.html" class="snap-center shrink-0 w-[85vw] md:w-auto md:col-span-2 relative overflow-hidden bg-white/90 backdrop-blur-md flex flex-col items-start p-6 lg:p-8 cursor-pointer hover:bg-white border border-black/10 rounded-2xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300 min-h-[280px] group">
+          <div class="flex items-start justify-between w-full mb-4">
+            <h3 class="text-xl font-medium text-neutral-900 tracking-tight leading-snug">Financial Operations</h3>
+            <div class="flex size-8 shrink-0 items-center justify-center rounded-md bg-white border border-black/10 group-hover:bg-[#DDF82A] group-hover:border-[#DDF82A] transition-colors">
               <svg class="w-4 h-4 text-neutral-900" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </div>
           </div>
-          <div class="mt-auto pt-8">
-              <p class="text-sm font-medium text-neutral-900 mb-2">Secure milestones &amp; payout routing</p>
-              <p class="text-[13px] text-neutral-500 leading-relaxed">Creator compensation is strictly tied to validated delivery metrics. We manage the 80/20 payout structure, releasing initial funds upon delivery and holding the remainder for compliance validation. All payments are routed securely through regulated financial infrastructure.</p>
+          <div class="flex flex-col mt-auto">
+            <p class="text-[15px] font-medium text-neutral-900 mb-2">Secure milestones &amp; payout routing</p>
+            <p class="text-[14px] text-neutral-500 leading-relaxed">Creator compensation is strictly tied to validated delivery metrics. We manage the 80/20 payout structure, releasing initial funds upon delivery and holding the remainder for compliance validation. All payments are routed securely through regulated financial infrastructure.</p>
           </div>
        </a>
 
-       <!-- Card 5 -->
-       <a href="/escalation.html" class="relative overflow-hidden bg-white/80 backdrop-blur-md flex flex-col items-start p-6 lg:p-8 cursor-pointer hover:bg-white/95 transition-all duration-300 h-full group">
-          <div class="flex items-start justify-between w-full mb-6">
-            <h3 class="text-lg font-semibold text-neutral-900 tracking-tight leading-snug">Escalation &amp; Tracking</h3>
-            <div class="flex size-8 shrink-0 items-center justify-center rounded-full bg-white border border-black/10 group-hover:bg-[#DDF82A] group-hover:border-[#DDF82A] transition-colors">
+       <!-- Card 5 (Bottom Right, 1/3 width) -->
+       <a href="/escalation.html" class="snap-center shrink-0 w-[85vw] md:w-auto md:col-span-2 relative overflow-hidden bg-white/90 backdrop-blur-md flex flex-col items-start p-6 lg:p-8 cursor-pointer hover:bg-white border border-black/10 rounded-2xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300 min-h-[280px] group">
+          <div class="flex items-start justify-between w-full mb-4">
+            <h3 class="text-xl font-medium text-neutral-900 tracking-tight leading-snug">Escalation &amp; Tracking</h3>
+            <div class="flex size-8 shrink-0 items-center justify-center rounded-md bg-white border border-black/10 group-hover:bg-[#DDF82A] group-hover:border-[#DDF82A] transition-colors">
               <svg class="w-4 h-4 text-neutral-900" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </div>
           </div>
-          <div class="mt-auto pt-8">
-              <p class="text-sm font-medium text-neutral-900 mb-2">Delivery tracking &amp; brand compliance</p>
-              <p class="text-[13px] text-neutral-500 leading-relaxed">Human curation alone cannot scale. We ingest public metadata via social APIs to continuously verify timeline adherence and FTC disclosure visibility. Any deviations are immediately routed through our highly structured escalation map for rapid resolution.</p>
+          <div class="flex flex-col mt-auto">
+            <p class="text-[15px] font-medium text-neutral-900 mb-2">Delivery tracking &amp; brand compliance</p>
+            <p class="text-[14px] text-neutral-500 leading-relaxed">Human curation alone cannot scale. We ingest public metadata via social APIs to continuously verify timeline adherence and FTC disclosure visibility. Any deviations are immediately routed through our highly structured escalation map for rapid resolution.</p>
           </div>
        </a>
     </div>
