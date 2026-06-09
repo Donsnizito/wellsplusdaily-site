@@ -3,7 +3,7 @@ const path = require('path');
 
 const dir = 'C:\\Users\\Shadow\\Downloads\\wellsplusdaily-site';
 
-const newFooter = `<footer class="w-full max-w-7xl mx-auto mb-8 pt-8 px-8 pb-4 bg-[#0A0A0A] text-white font-sans">
+const newFooter = `<footer class="w-full max-w-7xl mx-auto mb-8 mt-16 pt-16 px-8 pb-4 bg-[#0A0A0A] text-white font-sans">
   <div class="relative">
     <div class="relative z-10 pt-0 pr-0 pb-0 pl-0">
       
@@ -35,10 +35,10 @@ const newFooter = `<footer class="w-full max-w-7xl mx-auto mb-8 pt-8 px-8 pb-4 b
 
         <!-- Logo & Form -->
         <div class="lg:col-span-2 flex flex-col items-start lg:items-end text-left lg:text-right mt-8 lg:mt-0">
-          <div class="flex items-center gap-2 mb-4">
-            <img src="/logo_white.png" alt="Logo" class="w-10 h-10 sm:w-12 sm:h-12 object-contain invert" />
+          <a href="/" class="flex items-center gap-2 mb-4 group cursor-pointer">
+            <img src="/logo_white.png" alt="Logo" class="w-10 h-10 sm:w-12 sm:h-12 object-contain invert transition-transform duration-500 ease-out group-hover:rotate-[15deg] group-hover:scale-110" />
             <h3 class="text-3xl sm:text-4xl text-white font-semibold tracking-tighter" style="font-family: 'Red Hat Display', sans-serif;">wells+daily</h3>
-          </div>
+          </a>
           
           <form class="flex flex-col items-start lg:items-end gap-3 w-full max-w-[24rem]">
             <div class="flex flex-col sm:flex-row items-center w-full gap-2 sm:gap-0 bg-white p-1 rounded-2xl sm:rounded-full border border-neutral-200 shadow-sm focus-within:ring-2 focus-within:ring-[#DDF82A]/50 focus-within:border-[#DDF82A]">
