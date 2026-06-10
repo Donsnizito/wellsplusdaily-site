@@ -256,7 +256,20 @@ nav{
       
       <!-- Top Section -->
       <div class="pointer-events-auto max-w-4xl">
-          <span class="text-[length:var(--text-12)] font-semibold tracking-[0.22em] uppercase text-neutral-500 mb-6 block">Creator Partnership Brokerage</span>
+          <!-- Live Views Ticker -->
+          <style>
+            @keyframes dip {
+              0%   { color: #555; }
+              30%  { color: #c0392b; }
+              100% { color: #555; }
+            }
+            .dipping { animation: dip 0.4s ease-out; }
+          </style>
+          <div class="inline-flex items-center gap-2 md:gap-3 mb-6 md:mb-8">
+            <span class="text-[9px] md:text-[11px] font-medium tracking-[0.05em] md:tracking-[0.1em] uppercase text-[#9a9a9a] whitespace-nowrap">Average monthly views across active vetted roster:</span>
+            <span class="text-[10px] md:text-[11px] font-medium tracking-[0.04em] text-[#555] bg-[#ebebeb] rounded-md px-2 py-[2px] md:px-2.5 md:py-[3px] tabular-nums whitespace-nowrap" id="viewCount">143,800,000</span>
+          </div>
+
           <h1 class="text-[length:var(--text-30)] md:text-[length:var(--text-42)] leading-[1.05] tracking-[-0.03em] font-medium text-neutral-900">
               The new standard<br>in <em class="not-italic text-neutral-500">influencer</em><br>brokerage.
           </h1>
@@ -926,6 +939,52 @@ nav{
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+  // Live Views Ticker Logic
+  const BASE       = 143800000;
+  const INC_MIN    =  45000;
+  const INC_MAX    = 280000;
+  const DIP_MAX    =  15000;
+  const TICK_MIN   = 1000;
+  const TICK_MAX   = 3000;
+  const DIP_MIN_MS = 30000;
+  const DIP_MAX_MS = 60000;
+
+  let current  = BASE;
+  let elapsed  = 0;
+  let lastTick = Date.now();
+
+  const el = document.getElementById('viewCount');
+  
+  if (el) {
+    function rand(a, b) { return Math.random() * (b - a) + a; }
+    function fmt(n)      { return Math.round(n).toLocaleString('en-US'); }
+    let nextDip  = rand(DIP_MIN_MS, DIP_MAX_MS);
+
+    function tick() {
+      const now   = Date.now();
+      const delta = now - lastTick;
+      lastTick    = now;
+      elapsed    += delta;
+
+      if (elapsed >= nextDip) {
+        current  = Math.max(BASE, current - rand(5000, DIP_MAX));
+        el.classList.remove('dipping');
+        void el.offsetWidth;
+        el.classList.add('dipping');
+        nextDip = rand(DIP_MIN_MS, DIP_MAX_MS);
+        elapsed = 0;
+      } else {
+        current += rand(INC_MIN, INC_MAX);
+      }
+
+      el.textContent = fmt(current);
+      setTimeout(tick, rand(TICK_MIN, TICK_MAX));
+    }
+
+    el.textContent = fmt(current);
+    setTimeout(tick, rand(TICK_MIN, TICK_MAX));
+  }
+
   const menuBtn = document.getElementById('menuBtn');
   const mobileMenu = document.getElementById('mobileMenu');
   const header = document.getElementById('global-header');
